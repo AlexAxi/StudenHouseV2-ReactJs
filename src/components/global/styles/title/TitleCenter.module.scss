@@ -1,0 +1,52 @@
+$colors: ( primaryColor: #5874b6, secondaryColor: #4d4c4f, );
+$spacing: 1px;
+@function color($color-name) {
+    @return map-get($colors, $color-name);
+}
+
+$tablet: 785px;
+@mixin tablet {
+    @media (max-width: #{$tablet}) {
+        @content;
+    }
+}
+
+$phone: 525px;
+@mixin phone {
+    @media (max-width: #{$phone}) {
+        @content;
+    }
+}
+
+.titleWrapper {
+    display: flex;
+    justify-content: center;
+    width: 90vw;
+    margin: 0 auto;
+    margin-bottom: 35px;
+    margin-top: 95px;
+    @include tablet() {
+        margin-top: 3em;
+    }
+    @include phone() {
+        margin-top: 3em;
+    }
+}
+
+.titleH4 {
+    font-family: Barlow Condensed;
+    margin-bottom: 0;
+    font-family: Barlow Condensed;
+    font-size: 40px;
+    text-align: left;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: $spacing;
+    color: color(secondaryColor);
+    @include tablet() {
+        font-size: 30px;
+    }
+    @include phone() {
+        font-size: 25px;
+    }
+}

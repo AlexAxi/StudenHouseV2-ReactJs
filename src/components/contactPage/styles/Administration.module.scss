@@ -1,0 +1,257 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+/* * {
+  outline: 1px solid #f00 !important;
+} */
+
+body {
+    background: #fefefe;
+    font-family: "Barlow Condensed", sans-serif;
+}
+
+$desktop: 1025px;
+@mixin desktop {
+    @media (max-width: #{$desktop}) {
+        @content;
+    }
+}
+
+$tablet: 769px;
+@mixin tablet {
+    @media (max-width: #{$tablet}) {
+        @content;
+    }
+}
+
+$mobile: 621px;
+@mixin mobile {
+    @media (max-width: #{$mobile}) {
+        @content;
+    }
+}
+
+$mobile-smaller: 520px;
+@mixin mobile-smaller {
+    @media (max-width: #{$mobile-smaller}) {
+        @content;
+    }
+}
+
+$mobile-smaller1: 426px;
+@mixin mobile-smaller1 {
+    @media (max-width: #{$mobile-smaller1}) {
+        @content;
+    }
+}
+
+$mobile-smaller3: 376px;
+@mixin mobile-smaller3 {
+    @media (max-width: #{$mobile-smaller3}) {
+        @content;
+    }
+}
+
+$mobile-smaller2: 321px;
+@mixin mobile-smaller2 {
+    @media (max-width: #{$mobile-smaller2}) {
+        @content;
+    }
+}
+
+.MainContainerContact {
+    width: 94vw;
+    margin: auto;
+    margin-bottom: 10%;
+    @include tablet {
+        width: 90vw;
+    }
+    @include mobile {
+        width: 95vw;
+        margin-bottom: -15%;
+    }
+    @include mobile-smaller {}
+}
+
+.cardGrid {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-row-gap: 10%;
+    @include tablet {
+        grid-column-gap: 2%;
+    }
+    @include mobile {
+        grid-template-columns: 1fr 1fr;
+        grid-row-gap: 5%;
+    }
+    @include mobile-smaller {
+        grid-row-gap: 1%;
+    }
+}
+
+.imgContainer {
+    width: 12vw;
+    height: 18vh;
+    grid-column-start: 1 / 2;
+    object-fit: cover;
+    @include mobile {
+        width: 20vw;
+    }
+    @include mobile-smaller {
+        width: 41vw;
+    }
+}
+
+.cardStyle {
+    display: grid;
+    grid-template-columns: 0.5fr 1fr;
+    margin: auto;
+    @include mobile-smaller {
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.1fr 0.1fr 0.1fr;
+    }
+}
+
+.textContainer {
+    grid-column-start: 2 / 4;
+    background-color: #5874b6;
+    width: 14vw;
+    @include desktop {
+        width: 15vw;
+    }
+    @include tablet {
+        width: 17vw;
+    }
+    @include mobile {
+        width: 20vw;
+    }
+    @include mobile-smaller {
+        height: 20vh;
+        width: 41vw;
+    }
+    @include mobile-smaller3 {
+        height: 15vh;
+    }
+    @include mobile-smaller2 {
+        height: 13vh;
+    }
+}
+
+.textContainer1 {
+    grid-column-start: 2 / 4;
+    background-color: #4d4c4f;
+    width: 14vw;
+    @include desktop {
+        width: 15vw;
+    }
+    @include tablet {
+        width: 17vw;
+    }
+    @include mobile {
+        width: 20vw;
+    }
+    @include mobile-smaller {
+        height: 20vh;
+        width: 41vw;
+    }
+    @include mobile-smaller3 {
+        height: 15vh;
+    }
+    @include mobile-smaller2 {
+        height: 13vh;
+    }
+}
+
+.CardTitle {
+    color: white;
+    margin-top: 5%;
+    margin-left: 6%;
+    font-size: 1.6vw;
+    @include desktop {
+        font-size: 1.9vw;
+        margin-top: 8%;
+    }
+    @include tablet {
+        font-size: 2.3vw;
+        margin-top: 5%;
+    }
+    @include mobile {
+        font-size: 2.7vw;
+        margin-top: 6%;
+    }
+    @include mobile-smaller {
+        font-size: 4vw;
+        text-align: left;
+        margin-top: 5%;
+    }
+    @include mobile-smaller1 {
+        font-size: 4.6vw;
+    }
+    @include mobile-smaller2 {
+        font-size: 4.8vw;
+        margin-top: 2%;
+    }
+}
+
+.CardHeader {
+    color: white;
+    margin-left: 6%;
+    font-size: 1.2vw;
+    text-transform: uppercase;
+    margin-bottom: 8%;
+    font-weight: 100;
+    @include desktop {
+        font-size: 1.4vw;
+    }
+    @include tablet {
+        font-size: 1.9vw;
+    }
+    @include mobile {
+        font-size: 2.2vw;
+    }
+    @include mobile-smaller {
+        font-size: 3vw;
+        margin-top: 0%;
+        text-align: left;
+    }
+    @include mobile-smaller1 {
+        font-size: 3.4vw;
+    }
+    @include mobile-smaller2 {
+        font-size: 4.1vw;
+    }
+}
+
+.contactTag {
+    color: white;
+    margin-left: 6%;
+    margin-top: 3%;
+    font-size: 1vw;
+    @include desktop {
+        font-size: 1.3vw;
+    }
+    @include tablet {
+        font-size: 1.6vw;
+    }
+    @include mobile {
+        font-size: 1.8vw;
+    }
+    @include mobile-smaller {
+        font-size: 2.7vw;
+        text-align: left;
+    }
+    @include mobile-smaller1 {
+        font-size: 3vw;
+    }
+    @include mobile-smaller2 {
+        font-size: 3.2vw;
+    }
+}
+
+.contactTag:hover {}

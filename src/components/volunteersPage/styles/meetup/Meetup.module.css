@@ -1,0 +1,181 @@
+.container {
+  width: 100%;
+  height: auto;
+  font-family: "Barlow Condensed";
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1.5fr 1fr 1fr;
+      grid-template-columns: 1.5fr 1fr 1fr;
+}
+
+@media (max-width: 768px) {
+  .container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.div1 {
+  -ms-grid-column: 1;
+      grid-column-start: 1;
+  grid-column-end: 2;
+  background-image: url("../../images/BgDots.jpg");
+  background-size: cover;
+}
+
+@media (max-width: 768px) {
+  .div1 {
+    text-align: left;
+    -ms-grid-column: 1;
+        grid-column-start: 1;
+    grid-column-end: 4;
+    -ms-grid-row: 2;
+        grid-row-start: 2;
+    grid-row-end: 4;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+  }
+}
+
+.contact {
+  width: 70%;
+  margin: auto;
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .contact {
+    width: 90%;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact {
+    margin-left: 2em;
+  }
+}
+
+.contactTitle {
+  color: transparent;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 45px;
+  margin-top: .2em;
+  margin-bottom: 10px;
+  -webkit-text-stroke: 1.5px #5874b6;
+  letter-spacing: 1px;
+  margin-bottom: -5px;
+}
+
+@media (min-width: 1024px) and (max-width: 1290px) {
+  .contactTitle {
+    font-size: 25px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .contactTitle {
+    font-size: 29px;
+  }
+}
+
+@media (max-width: 768px) {
+  .contactTitle {
+    font-size: 29px;
+  }
+}
+
+.contactSubTitle {
+  color: white;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 30px;
+  margin-top: 10px;
+  margin-bottom: 25px;
+}
+
+@media (min-width: 1024px) and (max-width: 1290px) {
+  .contactSubTitle {
+    font-size: 25px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .contactSubTitle {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .contactSubTitle {
+    font-size: 20px;
+  }
+}
+
+.mail {
+  color: white;
+  font-weight: 400;
+  font-size: 24px;
+}
+
+@media (min-width: 1024px) and (max-width: 1290px) {
+  .mail {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .mail {
+    font-size: 19px;
+  }
+}
+
+@media (max-width: 768px) {
+  .mail {
+    font-size: 18px;
+  }
+}
+
+.button {
+  border: none;
+  text-decoration: none;
+  color: #FFFFFF;
+  text-align: center;
+  background-color: #5874b6;
+  font-size: 16px;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  padding: 2%;
+}
+
+@media (max-width: 768px) {
+  .button {
+    font-size: 12px;
+  }
+}
+
+.div2 {
+  -ms-grid-column: 2;
+      grid-column-start: 2;
+  grid-column-end: 4;
+  background-image: url("../../images/Meetup.jpg");
+  background-size: cover;
+}
+
+@media (max-width: 768px) {
+  .div2 {
+    -ms-grid-column: 1;
+        grid-column-start: 1;
+    grid-column-end: 4;
+    -ms-grid-row: 1;
+        grid-row-start: 1;
+    grid-row-end: 2;
+  }
+}
+/*# sourceMappingURL=Meetup.module.css.map */

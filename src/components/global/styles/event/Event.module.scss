@@ -1,0 +1,178 @@
+/* event */
+
+@mixin super-large {
+    @media (min-width: 1600px) and (max-width: 2000px) {
+        @content;
+    }
+}
+
+$tablet: 900px;
+@mixin tablet {
+    @media (max-width: #{$tablet}) {
+        @content;
+    }
+}
+
+$phone: 525px;
+@mixin phone {
+    @media (max-width: #{$phone}) {
+        @content;
+    }
+}
+
+.imgContainer {
+    position: relative;
+    overflow: hidden;
+}
+
+.imgContainer:hover {
+    background-color: grey;
+}
+
+.imgContainer img {
+    width: 100%;
+    height: 210px;
+    display: block;
+    object-fit: cover;
+    // object-position: 50% 50%;
+    /* transition: var(--mainTransition); */
+    transition: all .5s ease-in-out;
+}
+
+.imgContainer:hover img {
+    transform: scale(1.1);
+    opacity: .9;
+}
+
+.btnTop {
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* background: rgba(0, 0, 0, 0.8);
+    color: var(--mainWhite);
+    padding: 0.3rem 0.6rem 0.5rem;
+    border-bottom-right-radius: 1rem;
+    font-size: 0.5rem; */
+    text-align: center;
+    /* transition: var(--mainTransition); */
+}
+
+.event-link {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: scale(0);
+    transition: all 0.3s linear;
+}
+
+.imgContainer:hover {
+    /* background: rgba(0, 0, 0, 0.8); */
+}
+
+.imgContainer:hover img {
+    /* opacity: 0.3; */
+}
+
+.imgContainer:hover .btnTop {
+    /* opacity: 0; */
+}
+
+.imgContainer:hover .event-link {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.eventDetailsInfo {
+    background: var(--darkGrey);
+    text-transform: capitalize;
+    text-decoration: none;
+    color: white;
+    font-family: Barlow Condensed;
+    font-size: 17px;
+    padding: 0.5rem 0;
+    text-align: left;
+    font-weight: 500;
+    letter-spacing: var(--mainSpacing);
+    margin-top: 0;
+}
+
+.eventDetailsInfo2 {
+    background: var(--darkGrey);
+    text-transform: capitalize;
+    text-decoration: none;
+    color: white;
+    font-family: Barlow Condensed;
+    font-size: 17px;
+    padding: 0.5rem 0;
+    text-align: left;
+    font-weight: 700;
+    letter-spacing: var(--mainSpacing);
+}
+
+.eventDetailsInfo3 {
+    background: var(--darkGrey);
+    text-transform: capitalize;
+    text-decoration: none;
+    color: white;
+    font-family: Barlow Condensed;
+    font-size: 17px;
+    padding: 0.5rem 0;
+    text-align: left;
+    font-weight: 700;
+    letter-spacing: var(--mainSpacing);
+    @include tablet() {
+        margin-top: -1em;
+    }
+}
+
+.eventInfoDate {
+    background: var(--primaryColor);
+    text-transform: capitalize;
+    text-decoration: none;
+    color: white;
+    font-family: Barlow Condensed;
+    font-weight: bold;
+    font-size: 30px;
+    text-align: center;
+    letter-spacing: var(--mainSpacing);
+}
+
+.eventInfoWrapper {
+    display: flex;
+    background-color: var(--darkGrey);
+}
+
+.eventInfoLeft {
+    width: 70%;
+    padding-left: 1em;
+}
+
+.varyingText {
+    display: flex;
+    margin-top: -10px;
+}
+
+.varyingTextBlock {
+    display: flex;
+    margin-top: -10px;
+    @include tablet() {
+        display: block;
+    }
+}
+
+.eventInfoLeftBottom {
+    display: flex;
+    gap: 1em;
+    margin-top: 10px;
+    justify-content: space-between;
+    margin-right: 1em;
+}
+
+.eventInfoRight {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: var(--primaryColor);
+}

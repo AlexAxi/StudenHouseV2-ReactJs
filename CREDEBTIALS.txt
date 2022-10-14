@@ -1,0 +1,15 @@
+GOOGLE ACCOUNT
+email: studenthaal@gmail.com
+pass: m@nag3r1
+
+CONTENTFUL 
+--login with google account and password
+
+
+MAILCHIMP
+username: studenthaal
+pass: m@nag3er2Mail$
+
+EmailJS
+email: studenthaal@gmail.com
+pass: m@nag3r3Email£

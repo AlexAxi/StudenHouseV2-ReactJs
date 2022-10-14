@@ -1,0 +1,147 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed&display=swap");
+.btnPrimary {
+  height: 45px;
+  display: inline-block;
+  text-decoration: none;
+  font-family: Barlow Condensed;
+  font-size: 20px;
+  line-height: 1.2em;
+  letter-spacing: var(--mainSpacing);
+  color: white;
+  background: var(--primaryColor);
+  padding: 0.4rem 0.9rem;
+  border: 3px solid var(--primaryColor);
+  -webkit-transition: var(--mainTransition);
+  transition: var(--mainTransition);
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .btnPrimary {
+    font-size: 18px;
+    height: 40px;
+  }
+}
+
+@media (max-width: 500px) {
+  .btnPrimary {
+    font-size: 16px;
+    height: 38px;
+  }
+}
+
+@media (max-width: 320px) {
+  .btnPrimary {
+    height: 36px;
+  }
+}
+
+.btnPrimary:hover {
+  /* background: transparent; */
+  background: white;
+  color: var(--primaryColor);
+}
+
+.btnPrimaryReverse {
+  height: 45px;
+  display: inline-block;
+  text-decoration: none;
+  font-family: Barlow Condensed;
+  font-size: 20px;
+  line-height: 1.2em;
+  letter-spacing: var(--mainSpacing);
+  color: #5C73B7;
+  background: white;
+  padding: 0.4rem 0.9rem;
+  border: 3px solid white;
+  -webkit-transition: var(--mainTransition);
+  transition: var(--mainTransition);
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .btnPrimaryReverse {
+    font-size: 18px;
+    height: 40px;
+  }
+}
+
+@media (max-width: 500px) {
+  .btnPrimaryReverse {
+    font-size: 16px;
+    height: 38px;
+    height: 50px;
+    width: 120px;
+  }
+}
+
+@media (max-width: 320px) {
+  .btnPrimaryReverse {
+    height: 50px;
+  }
+}
+
+.btnPrimaryReverse:hover {
+  /* background: transparent; */
+  border: 3px solid grey;
+  color: grey;
+}
+
+.btnPrivacy {
+  height: 38px;
+  display: inline-block;
+  text-decoration: none;
+  font-family: Barlow Condensed;
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 1.2em;
+  letter-spacing: var(--mainSpacing);
+  color: #5C73B7;
+  background: white;
+  padding: 0.4rem 0.9rem;
+  border: 3px solid white;
+  -webkit-transition: var(--mainTransition);
+  transition: var(--mainTransition);
+  text-transform: uppercase;
+  margin-top: .5em;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .btnPrivacy {
+    font-size: 18px;
+    height: 40px;
+  }
+}
+
+@media (max-width: 500px) {
+  .btnPrivacy {
+    font-size: 16px;
+    height: 38px;
+  }
+}
+
+@media (max-width: 320px) {
+  .btnPrivacy {
+    height: 36px;
+  }
+}
+
+.btnPrivacy:hover {
+  /* background: transparent; */
+  border: 3px solid grey;
+  color: grey;
+}
+
+.aPrivacy {
+  color: white;
+  font-size: 13px;
+  margin-left: .5em;
+}
+
+.aPrivacy:hover {
+  color: #b4bfdd;
+}
+/*# sourceMappingURL=Button.module.css.map */

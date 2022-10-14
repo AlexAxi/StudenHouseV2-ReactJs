@@ -1,0 +1,195 @@
+.blueStripe {
+  height: 20px;
+  background-color: #5874b6;
+  margin: 0 auto;
+  margin-top: 5em;
+}
+
+@media (max-width: 376px) {
+  .blueStripe {
+    margin-top: 3em;
+  }
+}
+
+.cafeSection {
+  background-image: url("../../../images/imagesHero/bg-img-1.png");
+  background-size: cover;
+  margin: 0 auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 0.7fr 1fr 1fr;
+      grid-template-columns: 0.7fr 1fr 1fr;
+  font-family: Barlow Condensed;
+}
+
+@media (max-width: 776px) {
+  .cafeSection {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+}
+
+.cafeSection .openingHours {
+  margin: auto;
+}
+
+.cafeSection .openingHours .openHeader {
+  text-align: center;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  font-size: 3.5em;
+  font-weight: bold;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 2px;
+  color: white;
+}
+
+.cafeSection .openingHours .line1 {
+  border-bottom: 3px solid white;
+  width: auto;
+}
+
+.cafeSection .openingHours .line2 {
+  border-top: 3px solid white;
+  width: auto;
+}
+
+.cafeSection .openingHours .middle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.cafeSection .openingHours .middle .vl {
+  border-left: 3px solid white;
+  height: auto;
+}
+
+.cafeSection .openingHours .middle .leftSide,
+.cafeSection .openingHours .middle .rightSide {
+  margin: .5em;
+}
+
+.cafeSection .openingHours .middle .leftSide .svgWatch,
+.cafeSection .openingHours .middle .rightSide .svgWatch {
+  margin: .8em;
+  margin-top: 1.5em;
+}
+
+.cafeSection .openingHours .middle .heading3 {
+  color: white;
+  margin-bottom: 0;
+  margin-left: 0;
+}
+
+.cafeSection .openingHours .middle .paragraph {
+  color: white;
+  font-size: 18px;
+}
+
+.cafeSection .openingHours .bottom {
+  margin: 0 auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  -webkit-column-gap: .2em;
+          column-gap: .2em;
+}
+
+.cafeSection .openingHours .bottom .heading3 {
+  text-align: left;
+  color: white;
+  margin: 0 auto;
+  margin-top: 10px;
+  font-size: 18px;
+  line-height: 1.7em;
+}
+
+.cafeSection .openingHours .bottom .heading4 {
+  font-size: 20px;
+  color: white;
+  margin: 0 auto;
+  margin-top: 10px;
+  line-height: 1.5em;
+}
+
+.cafeSection .openingHours .bottom .paragraph {
+  color: white;
+  margin: 0 auto;
+  margin-top: 12px;
+  font-size: 18px;
+}
+
+.cafeSection .imageOpeningHours {
+  background-position: center;
+  background-size: cover;
+  height: auto;
+}
+
+@media (max-width: 776px) {
+  .cafeSection .imageOpeningHours {
+    height: 300px;
+    margin-top: 2em;
+  }
+}
+
+.cafeSection .cafeInfo {
+  margin: 0 auto;
+  margin-top: 3em;
+  width: 70%;
+  font-family: Barlow Condensed;
+}
+
+@media (max-width: 776px) {
+  .cafeSection .cafeInfo {
+    text-align: center;
+  }
+}
+
+.cafeSection .cafeInfo .headingInfo {
+  line-height: 1em;
+  margin-bottom: .5em;
+  color: white;
+  font-size: 40px;
+}
+
+.cafeSection .cafeInfo .pInfo {
+  color: white;
+  font-size: 20px;
+  width: 95%;
+}
+
+@media (max-width: 776px) {
+  .cafeSection .cafeInfo .pInfo {
+    width: 100%;
+  }
+}
+
+.cafeSection .cafeInfo .btnPrimary {
+  height: 45px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  display: inline-block;
+  text-decoration: none;
+  font-family: Barlow Condensed;
+  font-size: 20px;
+  letter-spacing: var(--mainSpacing);
+  color: white;
+  background: var(--primaryColor);
+  padding: 0.4rem 0.9rem;
+  border: 3px solid var(--primaryColor);
+  -webkit-transition: var(--mainTransition);
+  transition: var(--mainTransition);
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.cafeSection .cafeInfo .btnPrimary:hover {
+  /* background: transparent; */
+  background: white;
+  color: var(--primaryColor);
+}
+/*# sourceMappingURL=CaffeSection.module.css.map */

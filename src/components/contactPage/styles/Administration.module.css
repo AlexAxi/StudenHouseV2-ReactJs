@@ -1,0 +1,328 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* * {
+  outline: 1px solid #f00 !important;
+} */
+body {
+  background: #fefefe;
+  font-family: "Barlow Condensed", sans-serif;
+}
+
+.MainContainerContact {
+  width: 94vw;
+  margin: auto;
+  margin-bottom: 10%;
+}
+
+@media (max-width: 769px) {
+  .MainContainerContact {
+    width: 90vw;
+  }
+}
+
+@media (max-width: 621px) {
+  .MainContainerContact {
+    width: 95vw;
+    margin-bottom: -15%;
+  }
+}
+
+.cardGrid {
+  display: -ms-grid;
+  display: grid;
+  width: 100%;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  -ms-grid-rows: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+  grid-row-gap: 10%;
+}
+
+@media (max-width: 769px) {
+  .cardGrid {
+    grid-column-gap: 2%;
+  }
+}
+
+@media (max-width: 621px) {
+  .cardGrid {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    grid-row-gap: 5%;
+  }
+}
+
+@media (max-width: 520px) {
+  .cardGrid {
+    grid-row-gap: 1%;
+  }
+}
+
+.imgContainer {
+  width: 12vw;
+  height: 18vh;
+  grid-column-start: 1 / 2;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+@media (max-width: 621px) {
+  .imgContainer {
+    width: 20vw;
+  }
+}
+
+@media (max-width: 520px) {
+  .imgContainer {
+    width: 41vw;
+  }
+}
+
+.cardStyle {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 0.5fr 1fr;
+      grid-template-columns: 0.5fr 1fr;
+  margin: auto;
+}
+
+@media (max-width: 520px) {
+  .cardStyle {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: 0.1fr 0.1fr 0.1fr;
+        grid-template-rows: 0.1fr 0.1fr 0.1fr;
+  }
+}
+
+.textContainer {
+  grid-column-start: 2 / 4;
+  background-color: #5874b6;
+  width: 14vw;
+}
+
+@media (max-width: 1025px) {
+  .textContainer {
+    width: 15vw;
+  }
+}
+
+@media (max-width: 769px) {
+  .textContainer {
+    width: 17vw;
+  }
+}
+
+@media (max-width: 621px) {
+  .textContainer {
+    width: 20vw;
+  }
+}
+
+@media (max-width: 520px) {
+  .textContainer {
+    height: 20vh;
+    width: 41vw;
+  }
+}
+
+@media (max-width: 376px) {
+  .textContainer {
+    height: 15vh;
+  }
+}
+
+@media (max-width: 321px) {
+  .textContainer {
+    height: 13vh;
+  }
+}
+
+.textContainer1 {
+  grid-column-start: 2 / 4;
+  background-color: #4d4c4f;
+  width: 14vw;
+}
+
+@media (max-width: 1025px) {
+  .textContainer1 {
+    width: 15vw;
+  }
+}
+
+@media (max-width: 769px) {
+  .textContainer1 {
+    width: 17vw;
+  }
+}
+
+@media (max-width: 621px) {
+  .textContainer1 {
+    width: 20vw;
+  }
+}
+
+@media (max-width: 520px) {
+  .textContainer1 {
+    height: 20vh;
+    width: 41vw;
+  }
+}
+
+@media (max-width: 376px) {
+  .textContainer1 {
+    height: 15vh;
+  }
+}
+
+@media (max-width: 321px) {
+  .textContainer1 {
+    height: 13vh;
+  }
+}
+
+.CardTitle {
+  color: white;
+  margin-top: 5%;
+  margin-left: 6%;
+  font-size: 1.6vw;
+}
+
+@media (max-width: 1025px) {
+  .CardTitle {
+    font-size: 1.9vw;
+    margin-top: 8%;
+  }
+}
+
+@media (max-width: 769px) {
+  .CardTitle {
+    font-size: 2.3vw;
+    margin-top: 5%;
+  }
+}
+
+@media (max-width: 621px) {
+  .CardTitle {
+    font-size: 2.7vw;
+    margin-top: 6%;
+  }
+}
+
+@media (max-width: 520px) {
+  .CardTitle {
+    font-size: 4vw;
+    text-align: left;
+    margin-top: 5%;
+  }
+}
+
+@media (max-width: 426px) {
+  .CardTitle {
+    font-size: 4.6vw;
+  }
+}
+
+@media (max-width: 321px) {
+  .CardTitle {
+    font-size: 4.8vw;
+    margin-top: 2%;
+  }
+}
+
+.CardHeader {
+  color: white;
+  margin-left: 6%;
+  font-size: 1.2vw;
+  text-transform: uppercase;
+  margin-bottom: 8%;
+  font-weight: 100;
+}
+
+@media (max-width: 1025px) {
+  .CardHeader {
+    font-size: 1.4vw;
+  }
+}
+
+@media (max-width: 769px) {
+  .CardHeader {
+    font-size: 1.9vw;
+  }
+}
+
+@media (max-width: 621px) {
+  .CardHeader {
+    font-size: 2.2vw;
+  }
+}
+
+@media (max-width: 520px) {
+  .CardHeader {
+    font-size: 3vw;
+    margin-top: 0%;
+    text-align: left;
+  }
+}
+
+@media (max-width: 426px) {
+  .CardHeader {
+    font-size: 3.4vw;
+  }
+}
+
+@media (max-width: 321px) {
+  .CardHeader {
+    font-size: 4.1vw;
+  }
+}
+
+.contactTag {
+  color: white;
+  margin-left: 6%;
+  margin-top: 3%;
+  font-size: 1vw;
+}
+
+@media (max-width: 1025px) {
+  .contactTag {
+    font-size: 1.3vw;
+  }
+}
+
+@media (max-width: 769px) {
+  .contactTag {
+    font-size: 1.6vw;
+  }
+}
+
+@media (max-width: 621px) {
+  .contactTag {
+    font-size: 1.8vw;
+  }
+}
+
+@media (max-width: 520px) {
+  .contactTag {
+    font-size: 2.7vw;
+    text-align: left;
+  }
+}
+
+@media (max-width: 426px) {
+  .contactTag {
+    font-size: 3vw;
+  }
+}
+
+@media (max-width: 321px) {
+  .contactTag {
+    font-size: 3.2vw;
+  }
+}
+/*# sourceMappingURL=Administration.module.css.map */

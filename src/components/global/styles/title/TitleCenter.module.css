@@ -1,0 +1,49 @@
+.titleWrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 90vw;
+  margin: 0 auto;
+  margin-bottom: 35px;
+  margin-top: 95px;
+}
+
+@media (max-width: 785px) {
+  .titleWrapper {
+    margin-top: 3em;
+  }
+}
+
+@media (max-width: 525px) {
+  .titleWrapper {
+    margin-top: 3em;
+  }
+}
+
+.titleH4 {
+  font-family: Barlow Condensed;
+  margin-bottom: 0;
+  font-family: Barlow Condensed;
+  font-size: 40px;
+  text-align: left;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #4d4c4f;
+}
+
+@media (max-width: 785px) {
+  .titleH4 {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 525px) {
+  .titleH4 {
+    font-size: 25px;
+  }
+}
+/*# sourceMappingURL=TitleCenter.module.css.map */

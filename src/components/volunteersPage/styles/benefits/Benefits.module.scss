@@ -1,0 +1,202 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #fefefe;
+    font-family: "Barlow Condensed", sans-serif;
+}
+
+$d1200: 1232px;
+@mixin d1232 {
+    @media (max-width: #{$d1232}) {
+        @content;
+    }
+}
+
+$desktop-one: 1040px;
+@mixin desktop-one {
+    @media (max-width: #{$desktop-one}) {
+        @content;
+    }
+}
+
+$desktop-two: 901px;
+@mixin desktop-two {
+    @media (max-width: #{$desktop-two}) {
+        @content;
+    }
+}
+
+$desktop: 805px;
+@mixin desktop {
+    @media (max-width: #{$desktop}) {
+        @content;
+    }
+}
+
+$tablet1: 769px;
+@mixin tablet1 {
+    @media (max-width: #{$tablet1}) {
+        @content;
+    }
+}
+
+$tablet: 620px;
+@mixin tablet {
+    @media (max-width: #{$tablet}) {
+        @content;
+    }
+}
+
+$mobile: 435px;
+@mixin mobile {
+    @media (max-width: #{$mobile}) {
+        @content;
+    }
+}
+
+$mobile-smaller: 321px;
+@mixin mobile-smaller {
+    @media (max-width: #{$mobile-smaller}) {
+        @content;
+    }
+}
+
+$desktop-width: 1024px;
+$tablet-width: 768px;
+$mobile-width: 500px;
+@mixin desktop-med {
+    @media (min-width: 768px) and (max-width: 1200px) {
+        @content;
+    }
+}
+
+@mixin dextop {
+    @media (max-width: #{$desktop-width }) {
+        @content;
+    }
+}
+
+@mixin tablet-med {
+    @media (min-width: 768px) and (max-width: 965px) {
+        @content;
+    }
+}
+
+.container {
+    width: 90vw;
+    margin: 50px auto;
+    @include d1232() {
+        margin-top: 25vh;
+    }
+    @include desktop-med() {
+        margin-top: 700px;
+    }
+    @include tablet {
+        margin-top: 20vh;
+    }
+}
+
+.card {
+    width: 22%;
+    margin-bottom: 50px;
+    transition: 0.3s;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    @include desktop {
+        width: 48%;
+    }
+    @include tablet {
+        width: 46%;
+    }
+    @include mobile {
+        width: 47%;
+        margin-bottom: 30px;
+    }
+    @include mobile-smaller {
+        margin-bottom: 20px;
+    }
+}
+
+.cardHeader {
+    text-align: center;
+    padding: 20px 10px;
+    background-image: url("../../../../images/imagesHero/pattern-backround.png");
+    background-size: cover;
+    color: #fff;
+    height: 22vh;
+    @include desktop-one {
+        padding: 12px 10px;
+    }
+    @include mobile {
+        font-size: 0.8rem;
+    }
+}
+
+.cardBody {
+    padding: 25px 20px;
+    height: 15vh;
+    text-align: left;
+    font-size: 1.2rem;
+    background-color: #4d4c4f;
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+    @include desktop-one {
+        height: 22vh;
+    }
+    @include mobile {
+        font-size: 1rem;
+        height: 22vh;
+    }
+    @include mobile-smaller {
+        font-size: 0.9rem;
+        padding: 1px 10px;
+        height: 15vh;
+    }
+}
+
+.benefitsP {
+    width: 100%;
+    @include mobile-smaller {
+        margin-top: 10%;
+    }
+}
+
+.benefitsH1 {
+    @include mobile-smaller {
+        margin-left: 7%;
+    }
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-flow: wrap;
+}
+
+.svg1 {
+    margin-left: 20px;
+    @include mobile {
+        width: 70px;
+    }
+    @include mobile-smaller {
+        width: 67px;
+        margin-left: 25px;
+    }
+}
+
+.svg {
+    @include mobile {
+        width: 60px;
+    }
+    @include desktop-two {
+        width: 64px;
+    }
+    @include mobile-smaller {
+        width: 50px;
+        margin-left: 10%;
+    }
+}

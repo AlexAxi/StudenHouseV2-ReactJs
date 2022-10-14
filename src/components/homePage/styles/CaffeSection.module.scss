@@ -1,0 +1,185 @@
+$colors: ( primaryColor: #5874b6, secondaryColor: #4d4c4f, );
+$spacing: 1px;
+@function color($color-name) {
+    @return map-get($colors, $color-name);
+}
+
+$tablet: 776px;
+@mixin tablet {
+    @media (max-width: #{$tablet}) {
+        @content;
+    }
+}
+
+$phone: 525px;
+@mixin phone {
+    @media (max-width: #{$phone}) {
+        @content;
+    }
+}
+
+$phone-376: 376px;
+@mixin phone-376 {
+    @media (max-width: #{$phone-376}) {
+        @content;
+    }
+}
+
+.blueStripe {
+    height: 20px;
+    background-color: color(primaryColor);
+    margin: 0 auto;
+    margin-top: 5em;
+    @include phone-376() {
+        margin-top: 3em;
+    }
+}
+
+.cafeSection {
+    background-image: url("../../../images/imagesHero/bg-img-1.png");
+    background-size: cover;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 0.7fr 1fr 1fr;
+    font-family: Barlow Condensed;
+    @include tablet() {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .openingHours {
+        margin: auto;
+        .openHeader {
+            // margin: 0 auto;
+            // margin-top: 1em;
+            text-align: center;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            font-size: 3.5em;
+            font-weight: bold;
+            -webkit-text-fill-color: transparent;
+            -webkit-text-stroke-width: 2px;
+            color: white;
+            @include tablet() {
+                // margin-top: 1em;
+            }
+        }
+        .line1 {
+            border-bottom: 3px solid white;
+            width: auto;
+        }
+        .line2 {
+            border-top: 3px solid white;
+            width: auto;
+        }
+        // margin: 0 auto;
+        .middle {
+            display: flex;
+            .vl {
+                border-left: 3px solid white;
+                height: auto;
+            }
+            .leftSide,
+            .rightSide {
+                margin: .5em;
+                .svgWatch {
+                    margin: .8em;
+                    margin-top: 1.5em;
+                }
+            }
+            .heading3 {
+                color: white;
+                margin-bottom: 0;
+                margin-left: 0;
+            }
+            .paragraph {
+                color: white;
+                font-size: 18px;
+            }
+        }
+        .bottom {
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            column-gap: .2em;
+            .heading3 {
+                text-align: left;
+                color: white;
+                margin: 0 auto;
+                margin-top: 10px;
+                font-size: 18px;
+                line-height: 1.7em;
+            }
+            .heading4 {
+                font-size: 20px;
+                color: white;
+                margin: 0 auto;
+                margin-top: 10px;
+                line-height: 1.5em;
+            }
+            .paragraph {
+                color: white;
+                margin: 0 auto;
+                margin-top: 12px;
+                font-size: 18px;
+            }
+        }
+    }
+    .imageOpeningHours {
+        background-position: center;
+        background-size: cover;
+        height: auto;
+        @include tablet() {
+            height: 300px;
+            margin-top: 2em;
+        }
+    }
+    .cafeInfo {
+        margin: 0 auto;
+        margin-top: 3em;
+        width: 70%;
+        font-family: Barlow Condensed;
+        @include tablet() {
+            text-align: center;
+        }
+        .headingInfo {
+            line-height: 1em;
+            margin-bottom: .5em;
+            color: white;
+            font-size: 40px;
+        }
+        .pInfo {
+            color: white;
+            font-size: 20px;
+            width: 95%;
+            @include tablet() {
+                width: 100%;
+            }
+        }
+        .btnPrimary {
+            height: 45px;
+            margin-top: 40px;
+            margin-bottom: 40px;
+            display: inline-block;
+            text-decoration: none;
+            font-family: Barlow Condensed;
+            font-size: 20px;
+            letter-spacing: var(--mainSpacing);
+            color: white;
+            background: var(--primaryColor);
+            padding: 0.4rem 0.9rem;
+            border: 3px solid var(--primaryColor);
+            transition: var(--mainTransition);
+            text-transform: uppercase;
+            cursor: pointer;
+            @include tablet() {}
+            @include phone {
+                // margin-left: 20px;
+            }
+        }
+        .btnPrimary:hover {
+            /* background: transparent; */
+            background: white;
+            color: var(--primaryColor);
+        }
+    }
+}

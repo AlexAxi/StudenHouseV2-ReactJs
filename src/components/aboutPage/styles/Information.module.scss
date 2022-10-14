@@ -1,0 +1,134 @@
+$desktopBig-width: 1716;
+$desktop-width: 1024px;
+$tablet-width: 768px;
+$mobile-width: 599px;
+@mixin desktopBig {
+    @media (min-width: #{$desktop-width}) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (min-width: #{$tablet-width + 1px}) and (max-width: #{$desktop-width - 1px}) {
+        @content;
+    }
+}
+
+@mixin justTablet {
+    @media (max-width: 768px) {
+        @content;
+    }
+}
+
+@mixin mobile {
+    @media (max-width: 768px) {
+        @content;
+    }
+}
+
+@mixin mobileSmall {
+    @media (max-width: 375px) {
+        @content;
+    }
+}
+
+.container {
+    margin-top: 7em;
+    margin-bottom: 7em;
+    @include justTablet() {
+        margin-top: 5em;
+        margin-bottom: 5em;
+    }
+}
+
+.wrapper {
+    margin: 0 auto;
+    width: 90vw;
+    display: flex;
+    margin-bottom: 5em;
+    column-gap: 5%;
+    @include mobile() {
+        width: 95vw;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.wrapperReverse {
+    margin: 0 auto;
+    width: 90vw;
+    display: flex;
+    margin-bottom: 5em;
+    column-gap: 5%;
+    @include mobile() {
+        width: 95vw;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+}
+
+.number {
+    color: var(--darkGrey);
+    font-size: 36px;
+    @include desktopBig {
+        font-size: 2.3vw;
+    }
+    @include tablet {
+        font-size: 3vw;
+    }
+    @include mobile {
+        font-size: 20px;
+    }
+}
+
+.text {
+    width: 90%;
+    margin: auto;
+    font-size: 22px;
+    @include desktopBig {
+        font-size: 1.5vw;
+    }
+    @include tablet {
+        width: 95%;
+        font-size: 1.9vw;
+    }
+    @include mobile {
+        width: 90%;
+        font-size: 4vw;
+    }
+}
+
+.txt {
+    font-size: 21px;
+    @include tablet() {
+        font-size: 19px;
+    }
+    @include mobile() {
+        font-size: 17px;
+    }
+}
+
+.img {
+    width: 90%;
+    height: 320px;
+    background-position: center;
+    background-size: cover;
+    @include mobile {
+        width: 90%;
+        margin: 0 auto;
+        margin-top: 2em;
+    }
+}
+
+.imgTechology {
+    width: 90%;
+    height: 520px;
+    background-position: center;
+    background-size: cover;
+    @include mobile {
+        width: 90%;
+        height: 320px;
+        margin: 0 auto;
+        margin-top: 2em;
+    }
+}

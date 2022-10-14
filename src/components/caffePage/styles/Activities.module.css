@@ -1,0 +1,139 @@
+.container {
+  width: 100%;
+  font-family: "Barlow Condensed";
+  margin-top: 5em;
+}
+
+.grid {
+  margin-left: auto;
+  margin-right: auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1.5fr 1fr;
+      grid-template-columns: 1fr 1.5fr 1fr;
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+  color: white;
+  background-color: #4d4c4f;
+  height: 100%;
+}
+
+@media (max-width: 599px) {
+  .grid {
+    -ms-grid-columns: 1.5fr 1fr;
+        grid-template-columns: 1.5fr 1fr;
+    -ms-grid-rows: 1fr;
+        grid-template-rows: 1fr;
+  }
+}
+
+.title {
+  text-align: center;
+  -webkit-text-stroke: 1.5px #ffffff;
+  letter-spacing: 1px;
+  color: transparent;
+  font-weight: bold;
+  font-size: 3vw;
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .title {
+    font-size: 4.5vw;
+  }
+}
+
+@media (max-width: 599px) {
+  .title {
+    font-size: 6vw;
+    -webkit-text-stroke: 0.5px #ffffff;
+  }
+}
+
+.table {
+  font-weight: 400;
+  font-size: 2vw;
+  border-spacing: 7vh;
+  margin: auto;
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .table {
+    border-spacing: 2vh;
+    font-size: 3vw;
+    margin-top: 5%;
+  }
+}
+
+@media (max-width: 599px) {
+  .table {
+    border-spacing: 1vh;
+    font-size: 4vw;
+    margin-top: 11%;
+    margin-bottom: 11%;
+  }
+}
+
+.element1 {
+  -ms-grid-column: 1;
+      grid-column-start: 1;
+  grid-column-end: 2;
+  -ms-grid-row: 1;
+      grid-row-start: 1;
+  grid-row-end: 4;
+  background-image: url("../../../images/imagesHero/Activities1.jpg");
+  background-size: cover;
+}
+
+@media (max-width: 599px) {
+  .element1 {
+    -ms-grid-column: 2;
+        grid-column-start: 2;
+    grid-column-end: 4;
+    -ms-grid-row: 1;
+        grid-row-start: 1;
+    grid-row-end: 2;
+  }
+}
+
+.element2 {
+  -ms-grid-column: 2;
+      grid-column-start: 2;
+  grid-column-end: 3;
+  -ms-grid-row: 1;
+      grid-row-start: 1;
+  grid-row-end: 4;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10%;
+  margin-bottom: 10%;
+}
+
+@media (max-width: 599px) {
+  .element2 {
+    -ms-grid-column: 1;
+        grid-column-start: 1;
+    grid-column-end: 2;
+    -ms-grid-row: 1;
+        grid-row-start: 1;
+    grid-row-end: 2;
+    margin: auto;
+  }
+}
+
+.element3 {
+  -ms-grid-column: 3;
+      grid-column-start: 3;
+  grid-column-end: 4;
+  -ms-grid-row: 1;
+      grid-row-start: 1;
+  grid-row-end: 4;
+  background-image: url("../../../images/imagesHero/Activities2.jpg");
+  background-size: cover;
+}
+
+@media (max-width: 599px) {
+  .element3 {
+    display: none;
+  }
+}
+/*# sourceMappingURL=Activities.module.css.map */

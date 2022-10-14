@@ -1,0 +1,140 @@
+.container {
+  font-family: "Barlow Condensed";
+  color: #ffffff;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5em;
+  height: 30vh;
+  background-image: url("../../../images/imagesHero/FacilitiesBg.jpg");
+  background-size: cover;
+  display: -ms-grid;
+  display: grid;
+  row-gap: 5%;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+}
+
+@media (max-width: 768px) {
+  .container {
+    height: 20vh;
+  }
+}
+
+.title {
+  font-size: 3vw;
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .title {
+    font-size: 4vw;
+  }
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 5vw;
+  }
+}
+
+.text1 {
+  -ms-grid-column: 1;
+      grid-column-start: 1;
+  grid-column-end: 2;
+  -ms-grid-row: 1;
+      grid-row-start: 1;
+  grid-row-end: 2;
+  width: 50%;
+  margin: auto;
+  font-size: 1.5vw;
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .text1 {
+    width: 80%;
+    margin-left: 20%;
+    font-size: 2.5vw;
+  }
+}
+
+@media (max-width: 768px) {
+  .text1 {
+    width: 100%;
+    margin-left: 10%;
+    font-size: 3vw;
+  }
+}
+
+.btnContainer {
+  -ms-grid-column: 2;
+      grid-column-start: 2;
+  grid-column-end: 3;
+  -ms-grid-row: 1;
+      grid-row-start: 1;
+  grid-row-end: 2;
+  margin: auto;
+}
+
+.button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 10%;
+  padding-bottom: 10%;
+  padding-left: 20px;
+  padding-right: 20px;
+  border: none;
+  color: #ffffff;
+  font-size: 1vw;
+  font-weight: 400;
+  background: #5874B6;
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .button {
+    font-size: 1.5vw;
+  }
+}
+
+@media (max-width: 768px) {
+  .button {
+    font-size: 2.5vw;
+  }
+}
+
+.btnPrimary {
+  height: 45px;
+  margin-top: 40px;
+  display: inline-block;
+  text-decoration: none;
+  font-family: Barlow Condensed;
+  font-size: 20px;
+  letter-spacing: var(--mainSpacing);
+  color: white;
+  background: var(--primaryColor);
+  padding: 0.4rem 0.9rem;
+  border: 3px solid var(--primaryColor);
+  -webkit-transition: var(--mainTransition);
+  transition: var(--mainTransition);
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.btnPrimary:hover {
+  /* background: transparent; */
+  background: white;
+  color: var(--primaryColor);
+}
+/*# sourceMappingURL=CheckFacilities.module.css.map */

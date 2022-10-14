@@ -1,0 +1,282 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed&display=swap");
+$desktop-width: 1024px;
+$tablet-width: 768px;
+$mobile-width: 500px;
+@mixin desktop-med {
+    @media (min-width: 768px) and (max-width: 1200px) {
+        @content;
+    }
+}
+
+@mixin dextop {
+    @media (max-width: #{$desktop-width }) {
+        @content;
+    }
+}
+
+@mixin tablet-med {
+    @media (min-width: 768px) and (max-width: 965px) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (max-width: #{$tablet-width }) {
+        @content;
+    }
+}
+
+@mixin mobile {
+    @media (max-width: 500px) {
+        @content;
+    }
+}
+
+@mixin mobileSmall {
+    @media (max-width: 320px) {
+        @content;
+    }
+}
+
+@mixin mobileExtraSmall {
+    @media (max-width: 300px) {
+        @content;
+    }
+}
+
+body {
+    margin: 0;
+    font-family: "Barlow Condensed", sans-serif;
+}
+
+.Container {
+    width: 100%;
+    margin-top: 1em;
+    @include dextop() {
+        margin-top: 2em;
+    }
+    @include tablet() {
+        margin-top: 0;
+    }
+    @include mobile() {
+        // margin-top: 1.5em;
+    }
+}
+
+.headerGrid {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1.2fr 0.08fr 1fr;
+    grid-template-rows: 1fr;
+    // height: 70vh;
+    @include desktop-med() {
+        // height: 50vh;
+    }
+    @include tablet() {
+        // height: 40vh;
+        grid-template-columns: 1fr 0.04fr;
+        // grid-template-rows: 1fr 1fr;
+    }
+    @include mobile() {
+        // height: 50vh;
+        grid-template-columns: 1fr 0.04fr;
+        // grid-template-rows: 1fr 1fr;
+    }
+    .btnPrimary {
+        height: 45px;
+        margin-top: 40px;
+        margin-bottom: 40px;
+        display: inline-block;
+        text-decoration: none;
+        font-family: Barlow Condensed;
+        font-size: 20px;
+        line-height: 1.2em;
+        letter-spacing: var(--mainSpacing);
+        color: white;
+        background: var(--primaryColor);
+        padding: 0.4rem 0.9rem;
+        border: 3px solid var(--primaryColor);
+        transition: var(--mainTransition);
+        text-transform: uppercase;
+        cursor: pointer;
+        @include tablet() {
+            font-size: 18px;
+            height: 40px;
+        }
+        @include mobile() {
+            font-size: 16px;
+            height: 38px;
+        }
+        @include mobileSmall() {
+            height: 36px;
+        }
+        @include mobileExtraSmall() {}
+    }
+    .btnPrimary:hover {
+        /* background: transparent; */
+        background: white;
+        color: var(--primaryColor);
+    }
+}
+
+.titleGrid {
+    width: 80%;
+    position: relative;
+    left: 49%;
+    top: 52.5%;
+    transform: translate(-50%, -50%);
+    @include tablet() {
+        left: 43.5%;
+        width: 77%;
+    }
+    @include mobile() {
+        left: 49%;
+        width: 88.5%;
+    }
+}
+
+.titleMain {
+    color: #5874b6;
+    text-transform: uppercase;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 2.7px;
+    letter-spacing: 2.7px;
+    font-size: 65px;
+    font-weight: 800;
+    margin-bottom: -3px;
+    @include desktop-med() {
+        font-size: 55px;
+    }
+    @include tablet() {
+        // margin-top: 0.5em;
+        font-size: 45px;
+        -webkit-text-stroke-width: 2px;
+        letter-spacing: 2px;
+    }
+    @include mobile() {
+        font-size: 45px;
+        // margin-top: 0.5em;
+        -webkit-text-stroke-width: 2px;
+        letter-spacing: 1.5px;
+    }
+    @include mobileSmall() {
+        font-size: 35px;
+        // margin-top: 0.5em;
+    }
+    @include mobileExtraSmall() {
+        font-size: 35px;
+    }
+}
+
+.titleSecond {
+    font-size: 2vw;
+    text-transform: uppercase;
+    color: #ffffff;
+    @include desktop-med() {
+        font-size: 35px;
+    }
+    @include tablet() {
+        margin-top: 0.1em;
+        font-size: 25px;
+    }
+    @include mobile() {
+        font-size: 25px;
+    }
+    @include mobileSmall() {
+        font-size: 20px;
+    }
+    @include mobileExtraSmall() {
+        font-size: 18px;
+    }
+}
+
+.paragraph {
+    color: #ffffff;
+    font-size: 25px;
+    margin-top: 33px;
+    @include desktop-med() {
+        font-size: 18px;
+    }
+    @include tablet() {
+        font-size: 18px;
+    }
+    @include mobile() {
+        font-size: 16px;
+        margin-top: 23px;
+    }
+}
+
+.column1 {
+    background-image: url("../../images/imagesHero/bcImage.png");
+    background-size: cover;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    @include tablet() {
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+}
+
+.patternBox {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    background-size: cover;
+    background-image: url("../../images/imagesHero/pattern.png");
+    @include tablet() {
+        grid-column-start: 2;
+        grid-column-end: 4;
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+}
+
+.imageBox {
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: 100%;
+    @include tablet() {
+        grid-column-start: 1;
+        grid-column-end: 4;
+        grid-row-start: 2;
+        grid-row-end: 4;
+        background-position: bottom;
+    }
+    @include mobile() {
+        display: none;
+    }
+}
+
+.becomeVolWrapper {
+    background-color: #5874b6;
+    @include desktop-med() {
+        // margin-top: 14vh;
+    }
+    @include dextop() {
+        // margin-top: 14vh;
+    }
+    @include tablet-med() {
+        // margin-top: 18vh;
+    }
+    @include tablet() {
+        margin-top: 0;
+    }
+}
+
+.becomeVol {
+    color: #ffffff;
+    height: 70px;
+    width: 90vw;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    align-items: center;
+    .h1Become {
+        @include tablet() {
+            font-size: 20px;
+        }
+        @include mobile() {
+            font-size: 18px;
+        }
+    }
+}

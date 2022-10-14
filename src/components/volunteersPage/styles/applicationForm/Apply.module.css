@@ -1,0 +1,505 @@
+.container {
+  width: 100%;
+  height: auto;
+  margin-top: 9em;
+  font-family: "Barlow Condensed";
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1.25fr;
+      grid-template-columns: 1fr 1fr 1.25fr;
+}
+
+@media (max-width: 768px) {
+  .container {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+  }
+}
+
+.div1 {
+  height: 100%;
+  -ms-grid-column: 1;
+      grid-column-start: 1;
+  grid-column-end: 3;
+  background-image: url("../../../../images/BGApply.jpg");
+  background-size: cover;
+}
+
+@media (max-width: 768px) {
+  .div1 {
+    -ms-grid-column: 1;
+        grid-column-start: 1;
+    grid-column-end: 4;
+    -ms-grid-row: 1;
+        grid-row-start: 1;
+    grid-row-end: 2;
+  }
+}
+
+.formContainer {
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 5%;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  width: 70%;
+  height: 100%;
+  margin-left: 5vw;
+  margin-right: auto;
+  margin-bottom: 8%;
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .formContainer {
+    width: 80%;
+  }
+}
+
+@media (max-width: 768px) {
+  .formContainer {
+    width: 90%;
+    margin-left: auto;
+  }
+}
+
+.formTitle {
+  font-weight: bold;
+  font-size: 40px;
+  color: #5874b6;
+  margin-top: 15px;
+  -ms-grid-column: 1;
+      grid-column-start: 1;
+  grid-column-end: 4;
+  -ms-grid-row: 1;
+      grid-row-start: 1;
+  grid-row-end: 2;
+  margin-left: 8%;
+  margin-bottom: .5em;
+}
+
+@media (min-width: 1024px) and (max-width: 1290px) {
+  .formTitle {
+    font-size: 30px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .formTitle {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .formTitle {
+    font-size: 30px;
+    margin-left: 6%;
+  }
+}
+
+input {
+  margin-top: 5px;
+  width: 100%;
+  height: 50%;
+  border: 2px solid #5874b6;
+}
+
+select {
+  margin-top: 5px;
+  width: 100%;
+  height: 50%;
+  border: 2px solid #5874b6;
+}
+
+.nameForm {
+  font-size: 20px;
+  font-weight: bold;
+  color: #4d4c4f;
+  -ms-grid-column: 1;
+      grid-column-start: 1;
+  grid-column-end: 2;
+  -ms-grid-row: 2;
+      grid-row-start: 2;
+  grid-row-end: 3;
+}
+
+@media (min-width: 1024px) and (max-width: 1290px) {
+  .nameForm {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .nameForm {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 768px) {
+  .nameForm {
+    font-size: 18px;
+  }
+}
+
+.inputDiv {
+  margin-bottom: 1em;
+}
+
+.formInput {
+  color: #4d4c4f;
+  height: 60%;
+  margin-bottom: 1.5em;
+  padding-left: .5em;
+}
+
+.formInput::-webkit-input-placeholder {
+  color: #4d4c4f;
+}
+
+.formInput:-ms-input-placeholder {
+  color: #4d4c4f;
+}
+
+.formInput::-ms-input-placeholder {
+  color: #4d4c4f;
+}
+
+.formInput::placeholder {
+  color: #4d4c4f;
+}
+
+.confirmation {
+  margin: auto 0;
+  color: #5874b6;
+}
+
+@media (min-width: 1024px) and (max-width: 1290px) {
+  .confirmation {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .confirmation {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 768px) {
+  .confirmation {
+    font-size: 18px;
+    margin-bottom: 1.5em;
+  }
+}
+
+.emailForm {
+  font-size: 20px;
+  font-weight: bold;
+  color: #4d4c4f;
+  -ms-grid-column: 2;
+      grid-column-start: 2;
+  grid-column-end: 4;
+  -ms-grid-row: 2;
+      grid-row-start: 2;
+  grid-row-end: 3;
+}
+
+@media (min-width: 1024px) and (max-width: 1290px) {
+  .emailForm {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .emailForm {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 768px) {
+  .emailForm {
+    font-size: 18px;
+  }
+}
+
+.birthdayForm {
+  font-size: 20px;
+  font-weight: bold;
+  color: #4d4c4f;
+  -ms-grid-column: 1;
+      grid-column-start: 1;
+  grid-column-end: 2;
+  -ms-grid-row: 3;
+      grid-row-start: 3;
+  grid-row-end: 4;
+}
+
+@media (min-width: 1024px) and (max-width: 1290px) {
+  .birthdayForm {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .birthdayForm {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 768px) {
+  .birthdayForm {
+    font-size: 18px;
+  }
+}
+
+.roleForm {
+  font-size: 20px;
+  font-weight: bold;
+  color: #4d4c4f;
+  -ms-grid-column: 2;
+      grid-column-start: 2;
+  grid-column-end: 4;
+  -ms-grid-row: 3;
+      grid-row-start: 3;
+  grid-row-end: 4;
+}
+
+@media (min-width: 1024px) and (max-width: 1290px) {
+  .roleForm {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .roleForm {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 768px) {
+  .roleForm {
+    font-size: 18px;
+  }
+}
+
+.button {
+  display: inline-block;
+  border: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-decoration: none;
+  color: #FFFFFF;
+  text-align: center;
+  background-color: #5874b6;
+  width: 70%;
+  height: 60%;
+  font-size: 14px;
+}
+
+@media (min-width: 1024px) and (max-width: 1290px) {
+  .button {
+    display: block;
+    width: 85%;
+    height: 60%;
+    font-size: 12px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .button {
+    display: block;
+    width: 95%;
+    height: 50%;
+    font-size: 10px;
+    margin-top: 3%;
+  }
+}
+
+@media (max-width: 768px) {
+  .button {
+    display: block;
+    width: 120%;
+    height: 60%;
+    font-size: 10px;
+    margin-top: 5%;
+  }
+}
+
+.div2 {
+  -ms-grid-column: 3;
+      grid-column-start: 3;
+  grid-column-end: 4;
+  background-image: url("../../images/BgDots.jpg");
+  background-size: cover;
+}
+
+@media (max-width: 768px) {
+  .div2 {
+    -ms-grid-column: 1;
+        grid-column-start: 1;
+    grid-column-end: 4;
+    -ms-grid-row: 2;
+        grid-row-start: 2;
+    grid-row-end: 4;
+  }
+}
+
+.contact {
+  width: 80%;
+  margin: auto;
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .contact {
+    width: 90%;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact {
+    width: 90%;
+  }
+}
+
+.contactTitle {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 35px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  color: white;
+}
+
+@media (min-width: 1024px) and (max-width: 1290px) {
+  .contactTitle {
+    font-size: 25px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .contactTitle {
+    font-size: 29px;
+  }
+}
+
+@media (max-width: 768px) {
+  .contactTitle {
+    font-size: 29px;
+  }
+}
+
+.icon {
+  width: 2vw;
+  vertical-align: middle;
+  margin: 10px;
+}
+
+@media (max-width: 768px) {
+  .icon {
+    width: 5vw;
+  }
+}
+
+.icon:hover {
+  stroke: #5874b6;
+}
+
+.mail {
+  color: white;
+  height: auto;
+  font-weight: 400;
+  font-size: 24px;
+}
+
+@media (min-width: 1024px) and (max-width: 1290px) {
+  .mail {
+    font-size: 20px;
+  }
+}
+
+.phone {
+  color: white;
+  height: auto;
+  font-weight: 400;
+  font-size: 24px;
+  letter-spacing: 1.5px;
+}
+
+@media (min-width: 1024px) and (max-width: 1290px) {
+  .phone {
+    font-size: 20px;
+  }
+}
+
+.local {
+  color: white;
+  height: auto;
+  font-weight: 400;
+  font-size: 24px;
+  letter-spacing: 1.5px;
+}
+
+@media (min-width: 1024px) and (max-width: 1290px) {
+  .local {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .local {
+    margin-bottom: 1em;
+  }
+}
+
+.aTag {
+  color: #FFFFFF;
+}
+
+@media (max-width: 768px) {
+  .aTag {
+    font-size: 18px;
+  }
+}
+
+.aTag:hover {
+  color: #5874b6;
+}
+
+.checkBoxDiv {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr .9fr;
+      grid-template-columns: 1fr .9fr;
+}
+
+@media (max-width: 768px) {
+  .checkBoxDiv {
+    -ms-grid-columns: 1fr .1fr;
+        grid-template-columns: 1fr .1fr;
+  }
+}
+
+.checkBoxLabel {
+  color: #5874b6;
+}
+
+@media (max-width: 768px) {
+  .checkBoxLabel {
+    margin-bottom: .5em;
+  }
+}
+
+.checkBox {
+  accent-color: #5874b6;
+  width: 20px;
+  margin: 0;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .checkBox {
+    margin-top: .5em;
+  }
+}
+/*# sourceMappingURL=Apply.module.css.map */

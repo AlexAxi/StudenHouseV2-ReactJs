@@ -1,0 +1,115 @@
+$colors: ( primaryColor: #5874b6, secondaryColor: #4d4c4f, );
+$spacing: 1px;
+@function color($color-name) {
+    @return map-get($colors, $color-name);
+}
+
+$tablet: 776px;
+@mixin tablet {
+    @media (max-width: #{$tablet}) {
+        @content;
+    }
+}
+
+$phone: 525px;
+@mixin phone {
+    @media (max-width: #{$phone}) {
+        @content;
+    }
+}
+
+.wrapper {
+    font-family: Barlow Condensed;
+    width: 90vw;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr .5fr;
+    column-gap: 12vw;
+    padding: 2em;
+    @include tablet() {
+        padding-left: 0;
+        padding-right: 0;
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}
+
+.newsletter {
+    background-image: url("../../../images/NewsletterBackground.jpg");
+    background-size: cover;
+    .headingNewsletter {
+        width: 95%;
+        font-size: 40px;
+        @include phone() {
+            font-size: 25px;
+        }
+    }
+    .fields {
+        display: grid;
+        grid-template-columns: 1fr;
+        .input {
+            margin-top: 1em;
+            height: 40px;
+            padding: 1em;
+            color: color(secondaryColor);
+            font-family: Barlow Condensed;
+            font-size: 20px;
+        }
+        .btnPrimary {
+            min-width: 120px;
+            max-width: 120px;
+            height: 45px;
+            margin-top: 20px;
+            display: inline-block;
+            text-decoration: none;
+            font-family: Barlow Condensed;
+            font-size: 20px;
+            letter-spacing: var(--mainSpacing);
+            color: white;
+            background: var(--primaryColor);
+            padding: 0.4rem 0.9rem;
+            border: 3px solid var(--primaryColor);
+            transition: var(--mainTransition);
+            text-transform: uppercase;
+            cursor: pointer;
+            @include phone {}
+        }
+        .btnPrimary:hover {
+            /* background: transparent; */
+            background: white;
+            color: var(--primaryColor);
+        }
+    }
+}
+
+.btnPrimary {
+    min-width: 120px;
+    max-width: 120px;
+    height: 45px;
+    margin-top: 20px;
+    display: inline-block;
+    text-decoration: none;
+    font-family: Barlow Condensed;
+    font-size: 20px;
+    letter-spacing: var(--mainSpacing);
+    color: white;
+    background: var(--primaryColor);
+    padding: 0.4rem 0.9rem;
+    border: 3px solid var(--primaryColor);
+    transition: var(--mainTransition);
+    text-transform: uppercase;
+    cursor: pointer;
+    @include phone {}
+}
+
+.btnPrimary:hover {
+    /* background: transparent; */
+    background: white;
+    color: var(--primaryColor);
+}
+
+.success {
+    color: #5874b6;
+    margin: 0;
+    font-size: 22px;
+}

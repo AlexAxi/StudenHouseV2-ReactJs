@@ -1,0 +1,149 @@
+$desktopBig-width: 1291px;
+$desktop-width: 1024px;
+$tablet-width: 768px;
+$mobile-width: 599px;
+@mixin desktopMed {
+    @media (min-width: #{$desktop-width}) and (max-width: #{$desktopBig-width - 1px}) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
+        @content;
+    }
+}
+
+@mixin mobile {
+    @media (max-width: 768px) {
+        @content;
+    }
+}
+
+.container {
+    width: 100%;
+    height: auto;
+    font-family: "Barlow Condensed";
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr;
+    @include mobile {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.div1 {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    background-image: url("../../images/BgDots.jpg");
+    background-size: cover;
+    // background-color: rgb(226, 43, 116);
+    @include mobile {
+        text-align: left;
+        grid-column-start: 1;
+        grid-column-end: 4;
+        grid-row-start: 2;
+        grid-row-end: 4;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+    }
+}
+
+.contact {
+    width: 70%;
+    margin: auto;
+    // background-color: blue;
+    @include tablet {
+        width: 90%;
+    }
+    @include mobile() {
+        margin-left: 2em;
+    }
+}
+
+.contactTitle {
+    color: transparent;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 45px;
+    margin-top: .2em;
+    margin-bottom: 10px;
+    -webkit-text-stroke: 1.5px #5874b6;
+    letter-spacing: 1px;
+    margin-bottom: -5px;
+    @include desktopMed {
+        font-size: 25px;
+    }
+    @include tablet {
+        font-size: 29px;
+    }
+    @include mobile {
+        font-size: 29px;
+    }
+}
+
+.contactSubTitle {
+    color: white;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 30px;
+    margin-top: 10px;
+    margin-bottom: 25px;
+    @include desktopMed {
+        font-size: 25px;
+    }
+    @include tablet {
+        font-size: 20px;
+    }
+    @include mobile {
+        font-size: 20px;
+    }
+}
+
+.mail {
+    color: white;
+    // background-color: blue;
+    font-weight: 400;
+    font-size: 24px;
+    @include desktopMed {
+        font-size: 20px;
+    }
+    @include tablet {
+        font-size: 19px;
+    }
+    @include mobile {
+        font-size: 18px;
+    }
+}
+
+.button {
+    border: none;
+    text-decoration: none;
+    color: #FFFFFF;
+    text-align: center;
+    background-color: #5874b6;
+    font-size: 16px;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    padding: 2%;
+    @include mobile() {
+        font-size: 12px;
+    }
+}
+
+.div2 {
+    grid-column-start: 2;
+    grid-column-end: 4;
+    background-image: url("../../images/Meetup.jpg");
+    background-size: cover;
+    @include mobile {
+        grid-column-start: 1;
+        grid-column-end: 4;
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+}

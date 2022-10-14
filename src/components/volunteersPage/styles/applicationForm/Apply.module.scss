@@ -1,0 +1,393 @@
+$desktopBig-width: 1291px;
+$desktop-width: 1024px;
+$tablet-width: 768px;
+$mobile-width: 599px;
+@mixin desktopMed {
+    @media (min-width: #{$desktop-width}) and (max-width: #{$desktopBig-width - 1px}) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
+        @content;
+    }
+}
+
+@mixin mobile {
+    @media (max-width: 768px) {
+        @content;
+    }
+}
+
+.container {
+    width: 100%;
+    height: auto;
+    margin-top: 9em;
+    font-family: "Barlow Condensed";
+    display: grid;
+    grid-template-columns: 1fr 1fr 1.25fr;
+    @include mobile {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+}
+
+.div1 {
+    height: 100%;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    background-image: url("../../../../images/BGApply.jpg");
+    background-size: cover;
+    @include mobile {
+        grid-column-start: 1;
+        grid-column-end: 4;
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+}
+
+.formContainer {
+    display: grid;
+    grid-gap: 5%;
+    grid-template-columns: 1fr 1fr;
+    //  background-color: rgb(255, 0, 0);
+    width: 70%;
+    height: 100%;
+    margin-left: 5vw;
+    margin-right: auto;
+    margin-bottom: 8%;
+    @include tablet() {
+        width: 80%;
+    }
+    @include mobile() {
+        width: 90%;
+        margin-left: auto;
+    }
+}
+
+.formTitle {
+    font-weight: bold;
+    font-size: 40px;
+    color: #5874b6;
+    margin-top: 15px;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    margin-left: 8%;
+    margin-bottom: .5em;
+    @include desktopMed {
+        font-size: 30px;
+    }
+    @include tablet {
+        font-size: 30px;
+    }
+    @include mobile {
+        font-size: 30px;
+        margin-left: 6%;
+    }
+}
+
+input {
+    margin-top: 5px;
+    width: 100%;
+    height: 50%;
+    border: 2px solid #5874b6;
+}
+
+select {
+    margin-top: 5px;
+    width: 100%;
+    height: 50%;
+    border: 2px solid #5874b6;
+}
+
+.nameForm {
+    font-size: 20px;
+    font-weight: bold;
+    color: #4d4c4f;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    //  background-color: rgb(255, 163, 26);
+    @include desktopMed {
+        font-size: 18px;
+    }
+    @include tablet {
+        font-size: 18px;
+    }
+    @include mobile {
+        font-size: 18px;
+    }
+}
+
+.inputDiv {
+    margin-bottom: 1em;
+}
+
+.formInput {
+    color: #4d4c4f;
+    height: 60%;
+    margin-bottom: 1.5em;
+    padding-left: .5em;
+}
+
+.formInput::placeholder {
+    color: #4d4c4f;
+}
+
+.confirmation {
+    margin: auto 0;
+    color: #5874b6;
+    @include desktopMed {
+        font-size: 18px;
+    }
+    @include tablet {
+        font-size: 18px;
+    }
+    @include mobile {
+        font-size: 18px;
+        margin-bottom: 1.5em;
+    }
+}
+
+.emailForm {
+    font-size: 20px;
+    font-weight: bold;
+    color: #4d4c4f;
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    //  background-color: rgb(30, 255, 26);
+    @include desktopMed {
+        font-size: 18px;
+    }
+    @include tablet {
+        font-size: 18px;
+    }
+    @include mobile {
+        font-size: 18px;
+    }
+}
+
+.birthdayForm {
+    font-size: 20px;
+    font-weight: bold;
+    color: #4d4c4f;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    //  background-color: rgb(255, 72, 26);
+    @include desktopMed {
+        font-size: 18px;
+    }
+    @include tablet {
+        font-size: 18px;
+    }
+    @include mobile {
+        font-size: 18px;
+    }
+}
+
+.roleForm {
+    font-size: 20px;
+    font-weight: bold;
+    color: #4d4c4f;
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    //  background-color: rgb(26, 37, 255);
+    @include desktopMed {
+        font-size: 18px;
+    }
+    @include tablet {
+        font-size: 18px;
+    }
+    @include mobile {
+        font-size: 18px;
+    }
+}
+
+.button {
+    display: inline-block;
+    border: none;
+    box-sizing: border-box;
+    text-decoration: none;
+    color: #FFFFFF;
+    text-align: center;
+    background-color: #5874b6;
+    width: 70%;
+    height: 60%;
+    font-size: 14px;
+    @include desktopMed {
+        display: block;
+        width: 85%;
+        height: 60%;
+        font-size: 12px;
+    }
+    @include tablet {
+        display: block;
+        width: 95%;
+        height: 50%;
+        font-size: 10px;
+        margin-top: 3%;
+    }
+    @include mobile() {
+        display: block;
+        width: 120%;
+        height: 60%;
+        font-size: 10px;
+        margin-top: 5%;
+    }
+}
+
+.div2 {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    background-image: url("../../images/BgDots.jpg");
+    background-size: cover;
+    // background-color: rgb(226, 43, 116);
+    @include mobile {
+        grid-column-start: 1;
+        grid-column-end: 4;
+        grid-row-start: 2;
+        grid-row-end: 4;
+    }
+}
+
+.contact {
+    width: 80%;
+    margin: auto;
+    // background-color: blue;
+    @include tablet {
+        width: 90%;
+    }
+    @include mobile() {
+        width: 90%;
+    }
+}
+
+.contactTitle {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 35px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    color: white;
+    @include desktopMed {
+        font-size: 25px;
+    }
+    @include tablet {
+        font-size: 29px;
+    }
+    @include mobile {
+        font-size: 29px;
+    }
+}
+
+.icon {
+    width: 2vw;
+    vertical-align: middle;
+    margin: 10px;
+    @include mobile {
+        width: 5vw;
+    }
+}
+
+.icon:hover {
+    stroke: #5874b6;
+}
+
+.mail {
+    color: white;
+    height: auto;
+    // background-color: blue;
+    font-weight: 400;
+    font-size: 24px;
+    @include desktopMed {
+        font-size: 20px;
+    }
+    // @include tablet {
+    //     font-size: 18px;
+    // }
+    // @include mobile {
+    //     font-size: 20px;
+    // }
+}
+
+.phone {
+    color: white;
+    height: auto;
+    // background-color: rgb(116, 116, 240);
+    font-weight: 400;
+    font-size: 24px;
+    letter-spacing: 1.5px;
+    @include desktopMed {
+        font-size: 20px;
+    }
+    // @include tablet {
+    //     font-size: 18px;
+    // }
+    // @include mobile {
+    //     font-size: 16px;
+    // }
+}
+
+.local {
+    color: white;
+    height: auto;
+    // background-color: rgb(116, 116, 240);
+    font-weight: 400;
+    font-size: 24px;
+    letter-spacing: 1.5px;
+    @include desktopMed {
+        font-size: 20px;
+    }
+    // @include tablet {
+    //     font-size: 18px;
+    // }
+    @include mobile {
+        margin-bottom: 1em;
+    }
+}
+
+.aTag {
+    color: #FFFFFF;
+    @include mobile() {
+        font-size: 18px;
+    }
+}
+
+.aTag:hover {
+    color: #5874b6;
+}
+
+.checkBoxDiv {
+    display: grid;
+    grid-template-columns: 1fr .9fr;
+    @include mobile {
+        grid-template-columns: 1fr .1fr;
+    }
+}
+
+.checkBoxLabel {
+    color: #5874b6;
+    @include mobile {
+        margin-bottom: .5em;
+    }
+}
+
+.checkBox {
+    accent-color: #5874b6;
+    width: 20px;
+    margin: 0;
+    cursor: pointer;
+    @include mobile {
+        margin-top: .5em;
+    }
+}

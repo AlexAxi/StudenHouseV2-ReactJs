@@ -1,0 +1,114 @@
+.wrapper {
+  font-family: Barlow Condensed;
+  width: 90vw;
+  margin: 0 auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr .5fr;
+      grid-template-columns: 1fr .5fr;
+  -webkit-column-gap: 12vw;
+          column-gap: 12vw;
+  padding: 2em;
+}
+
+@media (max-width: 776px) {
+  .wrapper {
+    padding-left: 0;
+    padding-right: 0;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+}
+
+.newsletter {
+  background-image: url("../../../images/NewsletterBackground.jpg");
+  background-size: cover;
+}
+
+.newsletter .headingNewsletter {
+  width: 95%;
+  font-size: 40px;
+}
+
+@media (max-width: 525px) {
+  .newsletter .headingNewsletter {
+    font-size: 25px;
+  }
+}
+
+.newsletter .fields {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+}
+
+.newsletter .fields .input {
+  margin-top: 1em;
+  height: 40px;
+  padding: 1em;
+  color: #4d4c4f;
+  font-family: Barlow Condensed;
+  font-size: 20px;
+}
+
+.newsletter .fields .btnPrimary {
+  min-width: 120px;
+  max-width: 120px;
+  height: 45px;
+  margin-top: 20px;
+  display: inline-block;
+  text-decoration: none;
+  font-family: Barlow Condensed;
+  font-size: 20px;
+  letter-spacing: var(--mainSpacing);
+  color: white;
+  background: var(--primaryColor);
+  padding: 0.4rem 0.9rem;
+  border: 3px solid var(--primaryColor);
+  -webkit-transition: var(--mainTransition);
+  transition: var(--mainTransition);
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.newsletter .fields .btnPrimary:hover {
+  /* background: transparent; */
+  background: white;
+  color: var(--primaryColor);
+}
+
+.btnPrimary {
+  min-width: 120px;
+  max-width: 120px;
+  height: 45px;
+  margin-top: 20px;
+  display: inline-block;
+  text-decoration: none;
+  font-family: Barlow Condensed;
+  font-size: 20px;
+  letter-spacing: var(--mainSpacing);
+  color: white;
+  background: var(--primaryColor);
+  padding: 0.4rem 0.9rem;
+  border: 3px solid var(--primaryColor);
+  -webkit-transition: var(--mainTransition);
+  transition: var(--mainTransition);
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.btnPrimary:hover {
+  /* background: transparent; */
+  background: white;
+  color: var(--primaryColor);
+}
+
+.success {
+  color: #5874b6;
+  margin: 0;
+  font-size: 22px;
+}
+/*# sourceMappingURL=Newsletter.module.css.map */

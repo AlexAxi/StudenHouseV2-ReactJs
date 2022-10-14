@@ -1,0 +1,448 @@
+// $desktopBig-width: 1291px;
+// $desktop-width: 1024px;
+// $tablet-width: 768px;
+// $mobile-width: 599px;
+$colors: ( primaryColor: #5874b6, secondaryColor: #4d4c4f, );
+$spacing: 1px;
+@function color($color-name) {
+    @return map-get($colors, $color-name);
+}
+
+@mixin tablet {
+    @media (max-width: 768px) {
+        @content;
+    }
+}
+
+@mixin mobile {
+    @media (max-width: 515px) {
+        @content;
+    }
+}
+
+@mixin mobileSmall {
+    @media (max-width: 425px) {
+        @content;
+    }
+}
+
+.container {
+    width: 95vw;
+    margin: auto;
+    // background-color: aqua;
+    @include tablet() {
+        width: 85%;
+    }
+    @include mobile() {
+        width: 90%;
+    }
+}
+
+// -------------- banner ----------------
+.banner {
+    display: flex;
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+
+.bannerImg {
+    width: 35vw;
+    margin: auto;
+    @include tablet() {
+        width: 30vw;
+    }
+}
+
+.menuTitle {
+    font-size: 3.5vw;
+    color: black;
+    @include tablet() {
+        font-size: 4vw;
+    }
+    @include mobile() {
+        font-size: 5vw;
+    }
+    @include mobileSmall() {
+        font-size: 5vw;
+    }
+}
+
+// --------------  end banner ----------------
+// -------------- Category - Title ----------------
+.category {
+    display: flex;
+    // justify-content: space-between;
+    // background-color: rgb(255, 0, 212);
+}
+
+.title {
+    font-size: 1.5vw;
+    font-weight: 500;
+    color: black;
+    @include tablet() {
+        font-size: 2vw;
+    }
+    @include mobile() {
+        font-size: 3vw;
+    }
+    @include mobileSmall() {
+        font-size: 2.7vw;
+    }
+}
+
+.line {
+    margin: auto;
+    width: 20%;
+    height: 3px;
+    background-color: #5874b6;
+}
+
+.lineBig {
+    margin: auto;
+    width: 40%;
+    height: 3px;
+    background-color: #5874b6;
+}
+
+.size {
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: 5px;
+    font-size: 1.5vw;
+    font-weight: 500;
+    @include tablet() {
+        font-size: 1.7vw;
+    }
+    @include mobile() {
+        font-size: 2vw;
+    }
+    @include mobileSmall() {
+        font-size: 2.5vw;
+    }
+}
+
+.text {
+    margin: auto;
+    margin-right: 5px;
+    font-size: 1.5vw;
+    font-weight: 500;
+    color: #5874b6;
+    width: 90%;
+    @include tablet() {
+        font-size: 1.7vw;
+    }
+    @include mobile() {
+        font-size: 2.5vw;
+    }
+    @include mobileSmall() {
+        font-size: 2.8vw;
+    }
+}
+
+// -------------- end  Category - Title ----------------
+// -------------- Product style ----------------
+.icon {
+    width: 2vw;
+    height: 100%;
+    object-fit: cover;
+    margin: auto;
+    @include mobile() {
+        width: 2.7vw;
+    }
+    @include mobileSmall() {
+        width: 2.5vw;
+        margin: auto;
+    }
+}
+
+.noIcon {
+    width: 2vw;
+    border: none;
+}
+
+.productName {
+    font-size: 1.5vw;
+    font-weight: 400;
+    color: black;
+    margin-left: 10%;
+    @include tablet() {
+        font-size: 2vw;
+    }
+    @include mobile() {
+        font-size: 2.7vw;
+    }
+}
+
+.productSmall {
+    font-size: 1.1vw;
+    font-weight: 400;
+    margin-top: -5px;
+    color: rgb(0, 0, 0);
+    @include tablet() {
+        font-size: 1.4vw;
+    }
+    @include mobile() {
+        font-size: 2vw;
+    }
+}
+
+.price {
+    font-size: 1.5vw;
+    font-weight: 400;
+    color: black;
+    // margin-left: 50%;
+    float: right;
+    @include tablet() {
+        font-size: 2vw;
+    }
+    @include mobile() {
+        font-size: 2.5vw;
+    }
+}
+
+// -------------- End Product ----------------
+.GridMenu {
+    width: 100%;
+    height: auto;
+    font-family: "Barlow Condensed";
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 25px;
+    @include tablet() {
+        grid-template-columns: 1fr 1fr;
+        // grid-template-rows: 1fr 1fr 1fr  1fr;
+    }
+    @include mobile() {
+        grid-gap: 10px;
+    }
+    @include mobileSmall() {
+        grid-gap: 10px;
+    }
+}
+
+// -------------- collum 1 ----------------
+.collum1 {
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+
+.product {
+    grid-row-start: 3;
+    grid-row-end: 4;
+    display: flex;
+    justify-content: space-between;
+    //   background-color: rgb(88, 16, 16);
+}
+
+.product1 {
+    grid-row-start: 4;
+    grid-row-end: 5;
+    display: flex;
+    justify-content: space-between;
+    // background-color: rgb(69, 88, 16);
+}
+
+.product2 {
+    grid-row-start: 5;
+    grid-row-end: 6;
+    display: flex;
+    justify-content: space-between;
+    // background-color: rgb(168, 201, 76);
+}
+
+.product3 {
+    grid-row-start: 6;
+    grid-row-end: 7;
+    display: flex;
+    justify-content: space-between;
+    // background-color: rgb(76, 201, 105);
+}
+
+.product4 {
+    grid-row-start: 7;
+    grid-row-end: 8;
+    display: flex;
+    justify-content: space-between;
+    // background-color: rgb(9, 104, 32);
+}
+
+.product5 {
+    grid-row-start: 8;
+    grid-row-end: 9;
+    display: flex;
+    justify-content: space-between;
+    // background-color: rgb(27, 232, 78);
+}
+
+.product6 {
+    grid-row-start: 9;
+    grid-row-end: 10;
+    display: flex;
+    justify-content: space-between;
+    // background-color: rgb(81, 176, 104);
+}
+
+.product7 {
+    grid-row-start: 10;
+    grid-row-end: 11;
+    display: flex;
+    justify-content: space-between;
+    // background-color: rgb(15, 102, 36);
+}
+
+.product8 {
+    grid-row-start: 11;
+    grid-row-end: 12;
+    display: flex;
+    justify-content: space-between;
+    // background-color: rgb(44, 211, 83);
+}
+
+// -------------- collum 2 ----------------
+.collum2 {
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+// -------------- collum 3 ----------------
+.collum3 {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    @include tablet() {
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+}
+
+.collum3Net {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    @include tablet() {
+        grid-column-start: 2;
+        grid-column-end: 4;
+        // margin-top: -70%;
+    }
+}
+
+// -------------- row 2 ----------------
+.row2 {
+    margin-top: 15%;
+    @include tablet() {
+        margin-top: 0%;
+    }
+}
+
+.collumSmall {
+    @include tablet() {
+        margin-top: -73%;
+    }
+    @include mobile() {
+        margin-top: -90%;
+    }
+}
+
+.wine {
+    margin-top: -23%;
+    @include tablet() {
+        margin-top: -90%;
+    }
+    @include mobile() {
+        margin-top: -105%;
+    }
+}
+
+.net {
+    margin-top: -10%;
+    @include tablet() {
+        margin-top: -50%;
+    }
+    @include mobile() {
+        margin-top: -65%;
+    }
+}
+
+.snack {
+    margin-top: -25%;
+    @include tablet() {
+        margin-top: -20%;
+    }
+    @include mobile() {
+        margin-top: -5%;
+    }
+}
+
+.buttonsWrapper {
+    // width: 100vw;
+    height: auto;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.menuButton {
+    height: 65px;
+    width: 30vw;
+    margin-bottom: 40px;
+    display: inline-block;
+    text-decoration: none;
+    font-family: Barlow Condensed;
+    font-size: 20px;
+    font-weight: 500;
+    // letter-spacing: color(--mainSpacing);
+    color: white;
+    background: #5874B6;
+    padding: 0.4rem 0.9rem;
+    // border: 3px solid #5874B6;
+    border: none;
+    transition: var(--mainTransition);
+    text-transform: uppercase;
+    cursor: pointer;
+    @include tablet() {
+        height: 55px;
+        font-size: 18px;
+    }
+    @include mobile() {
+        height: 45px;
+        font-size: 16px;
+        margin-bottom: 1em;
+    }
+}
+
+.menuButtonActive {
+    height: 65px;
+    width: 30vw;
+    margin-bottom: 40px;
+    display: inline-block;
+    text-decoration: none;
+    font-family: Barlow Condensed;
+    font-size: 20px;
+    font-weight: 500;
+    // letter-spacing: var(--mainSpacing);
+    color: white;
+    background: #4D4C4F;
+    padding: 0.4rem 0.9rem;
+    // border: 3px solid #4D4C4F;
+    border: none;
+    transition: var(--mainTransition);
+    text-transform: uppercase;
+    cursor: pointer;
+    @include tablet() {
+        height: 55px;
+        font-size: 18px;
+    }
+    @include mobile() {
+        height: 45px;
+        font-size: 16px;
+        margin-bottom: 1em;
+    }
+}
+
+.menuButtonActive:hover {
+    color: white;
+    background: #5874B6;
+    padding: 0.4rem 0.9rem;
+}
+
+.menuWrapper {
+    margin-bottom: 2em;
+}

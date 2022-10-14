@@ -1,0 +1,101 @@
+.filterContainer {
+  width: 90vw;
+  margin: 0 auto;
+  margin-top: 2em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.filterForm {
+  width: 90vw;
+  margin: 0 auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(202px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(202px, 1fr));
+  grid-row-gap: .5rem;
+  grid-column-gap: 40px;
+}
+
+@media (max-width: 1028px) {
+  .filterForm {
+    -ms-grid-columns: (minmax(160px, 1fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  }
+}
+
+.formGroup {
+  text-transform: capitalize;
+  font-family: Barlow Condensed;
+  font-size: 20px;
+}
+
+.formGroup label {
+  display: block;
+  letter-spacing: var(--mainSpacing);
+  margin-bottom: 0.5rem;
+}
+
+@media (max-width: 525px) {
+  .formGroup label {
+    margin-bottom: -.2em;
+  }
+}
+
+.formControl {
+  width: 100%;
+  background: transparent;
+  text-transform: capitalize;
+  font-family: Barlow Condensed;
+  font-size: 1.2rem;
+}
+
+@media screen and (min-width: 776px) {
+  .filterForm {
+    width: 90vw;
+    -ms-grid-columns: (minmax(190px, 1fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .filterForm {
+    width: 95vw;
+    /* max-width: 1170px; */
+  }
+}
+
+.btnPrimary {
+  height: 40px;
+  margin-top: 40px;
+  display: inline-block;
+  text-decoration: none;
+  font-family: Barlow Condensed;
+  font-size: 20px;
+  letter-spacing: var(--mainSpacing);
+  color: white;
+  background: var(--primaryColor);
+  padding: 0.2rem 0.9rem;
+  border: 3px solid var(--primaryColor);
+  -webkit-transition: var(--mainTransition);
+  transition: var(--mainTransition);
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+@media (max-width: 525px) {
+  .btnPrimary {
+    margin-top: 25px;
+  }
+}
+
+.btnPrimary:hover {
+  /* background: transparent; */
+  background: white;
+  color: var(--primaryColor);
+}
+/*# sourceMappingURL=EventsFilter.module.css.map */

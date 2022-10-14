@@ -1,0 +1,411 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #fefefe;
+    font-family: "Barlow Condensed", sans-serif;
+}
+
+text {
+    color: #5874b6;
+    font-weight: 600;
+}
+
+$desktop: 1092px;
+@mixin desktop {
+    @media (max-width: #{$desktop}) {
+        @content;
+    }
+}
+
+$desktop-two: 940px;
+@mixin desktop-two {
+    @media (max-width: #{$desktop-two}) {
+        @content;
+    }
+}
+
+$tablet: 800px;
+@mixin tablet {
+    @media (max-width: #{$tablet}) {
+        @content;
+    }
+}
+
+$tablet-one: 769px;
+@mixin tablet-one {
+    @media (max-width: #{$tablet-one}) {
+        @content;
+    }
+}
+
+$tablet-mini: 721px;
+@mixin tablet-mini {
+    @media (max-width: #{$tablet-mini}) {
+        @content;
+    }
+}
+
+$phone: 650px;
+@mixin phone {
+    @media (max-width: #{$phone}) {
+        @content;
+    }
+}
+
+$phone-two: 541px;
+@mixin phone-two {
+    @media (max-width: #{$phone-two}) {
+        @content;
+    }
+}
+
+$phone-three: 470px;
+@mixin phone-three {
+    @media (max-width: #{$phone-three}) {
+        @content;
+    }
+}
+
+$phone-four: 376px;
+@mixin phone-four {
+    @media (max-width: #{$phone-four}) {
+        @content;
+    }
+}
+
+$phone-five: 321px;
+@mixin phone-five {
+    @media (max-width: #{$phone-five}) {
+        @content;
+    }
+}
+
+.MainContainer {
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    // grid-template-rows: 0.5fr 0.5fr 1fr;
+    // height: 70vh;
+    // width: 100%;
+    background-image: url("../../../images/imagesHero/bg-img-1.png");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    /*  @include tablet-one {
+    width: 103%;
+  } */
+    @include phone {
+        grid-template-columns: 1fr 1fr;
+        // grid-template-rows: 0.5fr 0.5fr 1fr;
+        // height: 85vh;
+        margin-bottom: 1em;
+    }
+    @include phone-three {
+        grid-template-columns: 1fr;
+        // grid-template-rows: 0.1fr 0.4fr 0.4fr 0.4fr 0.4fr 0.9fr;
+        // height: 120vh;
+    }
+}
+
+.Header {
+    grid-column: 1 / 4;
+    grid-row: 1 / 2;
+    font-size: 2.6vw;
+    letter-spacing: 3px;
+    margin-top: 35px;
+    margin-bottom: 55px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #ffffff;
+    text-transform: uppercase;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 1px;
+    @include desktop {
+        font-size: 2.7vw;
+    }
+    @include tablet {
+        font-size: 3vw;
+        margin-left: 32%;
+    }
+    @include phone {
+        font-size: 3.9vw;
+        margin-left: 22%;
+    }
+    @include phone-two {
+        font-size: 4.5vw;
+        margin-left: 20%;
+    }
+    @include phone-three {
+        grid-column: 1 / 4;
+        grid-row: 1 / 2;
+        font-size: 1.5rem;
+        margin-left: 5%;
+        margin-bottom: 15%;
+    }
+}
+
+.column1 {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    color: #ffffff;
+    margin-left: 30%;
+    margin-top: -3%;
+    @include desktop-two {
+        margin-left: 20%;
+    }
+    @include phone-two {
+        margin-left: 25%;
+    }
+    @include phone-three {
+        grid-column: 1 / 4;
+        grid-row: 2 / 3;
+        margin-top: -8%;
+        margin-left: 5%;
+    }
+}
+
+.mainParagraph {
+    margin-top: -4%;
+    font-size: 1.6rem;
+    @include desktop {
+        font-size: 1.4rem;
+    }
+    @include desktop-two {
+        font-size: 1.3rem;
+    }
+    @include tablet {
+        font-size: 1.2rem;
+        margin-top: -8%;
+    }
+    @include tablet-mini {
+        font-size: 1.1rem;
+    }
+    @include phone {
+        margin-left: 2%;
+        margin-top: -12%;
+    }
+    @include phone-two {
+        margin-top: -15%;
+    }
+    @include phone-three {
+        margin-top: -8%;
+        font-size: 1.2rem;
+    }
+    @include phone-five {
+        margin-top: -12%;
+    }
+}
+
+.title {
+    margin-bottom: -6%;
+    font-size: 2rem;
+    font-weight: 600;
+    @include desktop {
+        font-size: 1.7rem;
+    }
+    @include desktop-two {
+        font-size: 1.5rem;
+    }
+    @include tablet {
+        font-size: 1.4rem;
+    }
+    @include tablet-mini {
+        font-size: 1.2rem;
+        margin-bottom: -12%;
+    }
+    @include phone-two {
+        font-size: 1.2rem;
+        margin-bottom: -15%;
+    }
+    @include phone-three {
+        font-size: 1.4rem;
+        margin-bottom: -7%;
+    }
+}
+
+.column2 {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    color: #ffffff;
+    margin-left: 20%;
+    margin-top: -3%;
+    @include desktop-two {
+        margin-left: 15%;
+    }
+    @include phone {
+        margin-left: 5%;
+    }
+    @include phone-two {
+        margin-left: 10%;
+    }
+    @include phone-three {
+        grid-column: 1 / 4;
+        grid-row: 3 / 4;
+        margin-top: 8%;
+        margin-left: 5%;
+    }
+}
+
+.column3 {
+    grid-column: 3 / 4;
+    grid-row: 2 / 3;
+    color: #ffffff;
+    margin-left: 15%;
+    margin-top: -3%;
+    @include desktop-two {
+        margin-left: 10%;
+    }
+    @include phone {
+        grid-column: 1 / 2;
+        grid-row: 3 / 4;
+        margin-left: 20%;
+        margin-top: 15%;
+    }
+    @include phone-two {
+        margin-left: 25%;
+    }
+    @include phone-three {
+        grid-column: 1 / 4;
+        grid-row: 4 / 5;
+        margin-top: 8%;
+        margin-left: 5%;
+    }
+}
+
+.announce {
+    grid-column: 1 / 4;
+    grid-row: 3 / 5;
+    font-size: 0.5rem;
+    color: #ffffff;
+    margin-left: 10%;
+    margin-top: 3%;
+    margin-bottom: 4%;
+    @include desktop {
+        font-size: 0.7vw;
+    }
+    @include desktop-two {
+        margin-left: 7%;
+        font-size: 0.8vw;
+        margin-top: 5%;
+    }
+    @include tablet {
+        font-size: 0.85vw;
+    }
+    @include tablet-mini {
+        font-size: 0.9vw;
+        margin-top: 5%;
+    }
+    @include phone {
+        grid-column: 2 / 3;
+        grid-row: 3 / 4;
+        width: 70%;
+        margin-top: 18%;
+        font-size: 1.1vw;
+    }
+    @include phone-two {
+        margin-left: 10%;
+        width: 65%;
+    }
+    @include phone-three {
+        grid-column: 1 / 4;
+        grid-row: 5 / 6;
+        margin-top: 5%;
+        font-size: 0.5rem;
+        margin-left: 5%;
+    }
+    @include phone-four {
+        font-size: 0.4rem;
+    }
+    @include phone-five {
+        font-size: 0.4rem;
+        width: 75%;
+        margin-bottom: 10%;
+    }
+}
+
+.payment {
+    background-color: #5874b6;
+    grid-column: 1 / 4;
+    grid-row: 6 / 8;
+    @include phone-three {
+        grid-column: 1 / 4;
+        grid-row: 7 / 8;
+    }
+}
+
+.paymentTitle {
+    color: #ffffff;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    margin-left: 10%;
+    margin-top: 1.3%;
+    margin-bottom: 1%;
+    @include desktop-two {
+        margin-left: 7%;
+        margin-bottom: -2%;
+    }
+    @include phone {
+        font-size: 1.2rem;
+        margin-left: 10%;
+    }
+    @include phone-three {
+        margin-left: 5%;
+    }
+}
+
+.methods {
+    margin-left: 68%;
+    margin-top: -3%;
+    @include desktop {
+        margin-left: 60%;
+    }
+    @include desktop-two {
+        margin-left: 55%;
+    }
+    @include tablet {
+        margin-left: 50%;
+    }
+    @include tablet-mini {
+        margin-left: 48%;
+        margin-top: -4%;
+    }
+    @include phone-two {
+        margin-left: 44%;
+    }
+    @include phone-three {
+        margin-left: 5%;
+        margin-top: 5%;
+    }
+}
+
+.methods img {
+    padding-right: 5px;
+    padding-left: 5px;
+    width: 90px;
+    margin-bottom: 2.5%;
+    @include tablet-mini {
+        width: 80px;
+    }
+    @include phone {
+        width: 70px;
+    }
+    @include phone-two {
+        width: 70px;
+    }
+}
+
+.attentionH3 {
+    @include tablet() {
+        width: 80%;
+    }
+    @include phone {
+        width: 90%;
+    }
+    @include phone-two {
+        width: 90%;
+    }
+}

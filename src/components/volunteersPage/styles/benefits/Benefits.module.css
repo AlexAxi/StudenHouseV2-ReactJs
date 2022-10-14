@@ -1,0 +1,170 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background: #fefefe;
+  font-family: "Barlow Condensed", sans-serif;
+}
+
+.container {
+  width: 90vw;
+  margin: 50px auto;
+}
+
+.card {
+  width: 22%;
+  margin-bottom: 50px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+          box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+@media (max-width: 805px) {
+  .card {
+    width: 48%;
+  }
+}
+
+@media (max-width: 620px) {
+  .card {
+    width: 46%;
+  }
+}
+
+@media (max-width: 435px) {
+  .card {
+    width: 47%;
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 321px) {
+  .card {
+    margin-bottom: 20px;
+  }
+}
+
+.cardHeader {
+  text-align: center;
+  padding: 20px 10px;
+  background-image: url("../../../../images/imagesHero/pattern-backround.png");
+  background-size: cover;
+  color: #fff;
+  height: 22vh;
+}
+
+@media (max-width: 1040px) {
+  .cardHeader {
+    padding: 12px 10px;
+  }
+}
+
+@media (max-width: 435px) {
+  .cardHeader {
+    font-size: 0.8rem;
+  }
+}
+
+.cardBody {
+  padding: 25px 20px;
+  height: 15vh;
+  text-align: left;
+  font-size: 1.2rem;
+  background-color: #4d4c4f;
+  color: white;
+  font-weight: 600;
+}
+
+@media (max-width: 1040px) {
+  .cardBody {
+    height: 22vh;
+  }
+}
+
+@media (max-width: 435px) {
+  .cardBody {
+    font-size: 1rem;
+    height: 22vh;
+  }
+}
+
+@media (max-width: 321px) {
+  .cardBody {
+    font-size: 0.9rem;
+    padding: 1px 10px;
+    height: 15vh;
+  }
+}
+
+.benefitsP {
+  width: 100%;
+}
+
+@media (max-width: 321px) {
+  .benefitsP {
+    margin-top: 10%;
+  }
+}
+
+@media (max-width: 321px) {
+  .benefitsH1 {
+    margin-left: 7%;
+  }
+}
+
+.row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-flow: wrap;
+      flex-flow: wrap;
+}
+
+.svg1 {
+  margin-left: 20px;
+}
+
+@media (max-width: 435px) {
+  .svg1 {
+    width: 70px;
+  }
+}
+
+@media (max-width: 321px) {
+  .svg1 {
+    width: 67px;
+    margin-left: 25px;
+  }
+}
+
+@media (max-width: 435px) {
+  .svg {
+    width: 60px;
+  }
+}
+
+@media (max-width: 901px) {
+  .svg {
+    width: 64px;
+  }
+}
+
+@media (max-width: 321px) {
+  .svg {
+    width: 50px;
+    margin-left: 10%;
+  }
+}
+/*# sourceMappingURL=Benefits.module.css.map */

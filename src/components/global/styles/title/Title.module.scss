@@ -1,0 +1,71 @@
+$colors: ( primaryColor: #5874b6, secondaryColor: #4d4c4f, );
+$spacing: 1px;
+@function color($color-name) {
+    @return map-get($colors, $color-name);
+}
+
+$tablet: 785px;
+@mixin tablet {
+    @media (max-width: #{$tablet}) {
+        @content;
+    }
+}
+
+$phone: 525px;
+@mixin phone {
+    @media (max-width: #{$phone}) {
+        @content;
+    }
+}
+
+.titleWrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 90vw;
+    margin: 0 auto;
+    margin-bottom: 35px;
+    margin-top: 95px;
+    @include tablet() {
+        margin-top: 3em;
+    }
+    @include phone() {
+        margin-top: 3em;
+    }
+}
+
+.titleH4 {
+    font-family: Barlow Condensed;
+    margin-bottom: 0;
+    font-family: Barlow Condensed;
+    font-size: 40px;
+    text-align: left;
+    font-weight: 600;
+    letter-spacing: $spacing;
+    color: color(secondaryColor);
+    text-transform: uppercase;
+    @include tablet() {
+        margin-bottom: -1em;
+        font-size: 20px;
+    }
+}
+
+.buttonH3 {
+    margin-top: 0.2em;
+    margin-bottom: 0;
+    font-family: Barlow Condensed;
+    font-size: 30px;
+    text-align: left;
+    font-weight: 400;
+    letter-spacing: $spacing;
+    text-decoration: underline color(primaryColor);
+    cursor: pointer;
+    color: color(secondaryColor);
+    @include tablet() {
+        margin-bottom: -1em;
+        font-size: 16px;
+    }
+}
+
+.buttonH3:hover {
+    color: #5874b6;
+}

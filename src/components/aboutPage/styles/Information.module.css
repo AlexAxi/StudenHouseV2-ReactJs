@@ -1,0 +1,156 @@
+.container {
+  margin-top: 7em;
+  margin-bottom: 7em;
+}
+
+@media (max-width: 768px) {
+  .container {
+    margin-top: 5em;
+    margin-bottom: 5em;
+  }
+}
+
+.wrapper {
+  margin: 0 auto;
+  width: 90vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 5em;
+  -webkit-column-gap: 5%;
+          column-gap: 5%;
+}
+
+@media (max-width: 768px) {
+  .wrapper {
+    width: 95vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.wrapperReverse {
+  margin: 0 auto;
+  width: 90vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 5em;
+  -webkit-column-gap: 5%;
+          column-gap: 5%;
+}
+
+@media (max-width: 768px) {
+  .wrapperReverse {
+    width: 95vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+}
+
+.number {
+  color: var(--darkGrey);
+  font-size: 36px;
+}
+
+@media (min-width: 1024px) {
+  .number {
+    font-size: 2.3vw;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1023px) {
+  .number {
+    font-size: 3vw;
+  }
+}
+
+@media (max-width: 768px) {
+  .number {
+    font-size: 20px;
+  }
+}
+
+.text {
+  width: 90%;
+  margin: auto;
+  font-size: 22px;
+}
+
+@media (min-width: 1024px) {
+  .text {
+    font-size: 1.5vw;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1023px) {
+  .text {
+    width: 95%;
+    font-size: 1.9vw;
+  }
+}
+
+@media (max-width: 768px) {
+  .text {
+    width: 90%;
+    font-size: 4vw;
+  }
+}
+
+.txt {
+  font-size: 21px;
+}
+
+@media (min-width: 769px) and (max-width: 1023px) {
+  .txt {
+    font-size: 19px;
+  }
+}
+
+@media (max-width: 768px) {
+  .txt {
+    font-size: 17px;
+  }
+}
+
+.img {
+  width: 90%;
+  height: 320px;
+  background-position: center;
+  background-size: cover;
+}
+
+@media (max-width: 768px) {
+  .img {
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 2em;
+  }
+}
+
+.imgTechology {
+  width: 90%;
+  height: 520px;
+  background-position: center;
+  background-size: cover;
+}
+
+@media (max-width: 768px) {
+  .imgTechology {
+    width: 90%;
+    height: 320px;
+    margin: 0 auto;
+    margin-top: 2em;
+  }
+}
+/*# sourceMappingURL=Information.module.css.map */
